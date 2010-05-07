@@ -1,0 +1,265 @@
+<Configuration>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:@OpenHBC.Login.CurrentPage">
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@">
+      <Item value="Contains" priority="0" />
+      <Item value="Remarks" priority="0" />
+      <Item value="ToString" priority="3" />
+      <Item value="Treatment" priority="0" />
+      <Item value="visitId" priority="1" />
+      <Item value="Substring" priority="0" />
+      <Item value="SiteId" priority="0" />
+      <Item value="AssesmentDate" priority="0" />
+      <Item value="Year" priority="0" />
+      <Item value="visitDate" priority="0" />
+      <Item value="Parish" priority="0" />
+      <Item value="Section" priority="0" />
+      <Item value="PositionInFamily" priority="0" />
+      <Item value="runNonQuery" priority="0" />
+      <Item value="MaritalStatus" priority="0" />
+      <Item value="Month" priority="0" />
+      <Item value="Replace" priority="2" />
+      <Item value="Day" priority="1" />
+      <Item value="BreadWinner" priority="0" />
+      <Item value="visitID" priority="1" />
+      <Item value="NumberOfChildren" priority="0" />
+      <Item value="Append" priority="2" />
+      <Item value="Remove" priority="2" />
+      <Item value="IndexOf" priority="0" />
+      <Item value="scalarValue" priority="0" />
+      <Item value="UserId" priority="0" />
+      <Item value="Insert" priority="0" />
+      <Item value="ClinicalFindings" priority="0" />
+      <Item value="PatientId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OpenHBC.Login">
+      <Item value="CurrentPage" priority="1" />
+      <Item value="Refresh" priority="0" />
+      <Item value="clearPanel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Panel">
+      <Item value="Refresh" priority="0" />
+      <Item value="Controls" priority="1" />
+      <Item value="CompanyName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OpenHBC.IPasswordEncrypt">
+      <Item value="encryptPassword" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System">
+      <Item value="Data" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@OpenHBC.Entity">
+      <Item value="CurrentPatient" priority="0" />
+      <Item value="CurrentSiteId" priority="0" />
+      <Item value="CurrentUserId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OpenHBC.Patient">
+      <Item value="Section" priority="0" />
+      <Item value="Compound" priority="1" />
+      <Item value="MiddleName" priority="3" />
+      <Item value="Surname" priority="2" />
+      <Item value="Sex" priority="3" />
+      <Item value="PatientId" priority="3" />
+      <Item value="PositionInFamily" priority="1" />
+      <Item value="DateOfBirth" priority="2" />
+      <Item value="FirstName" priority="1" />
+      <Item value="AssesmentDate" priority="4" />
+      <Item value="NrcNumber" priority="1" />
+      <Item value="BreadWinner" priority="1" />
+      <Item value="Parish" priority="1" />
+      <Item value="MaritalStatus" priority="3" />
+      <Item value="NumberOfChildren" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="25" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List&lt;int&gt;">
+      <Item value="Remove" priority="0" />
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="Text" priority="14" />
+      <Item value="SelectedIndex" priority="0" />
+      <Item value="SelectedItem" priority="7" />
+      <Item value="SelectedText" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OpenHBC.CareVisit">
+      <Item value="VisitId" priority="3" />
+      <Item value="VisitDate" priority="1" />
+      <Item value="UserId" priority="0" />
+      <Item value="Remarks" priority="1" />
+      <Item value="SiteId" priority="0" />
+      <Item value="VisitType" priority="0" />
+      <Item value="Treatment" priority="1" />
+      <Item value="ClinicalFindings" priority="1" />
+      <Item value="PatientId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Odbc.OdbcConnection">
+      <Item value="Open" priority="0" />
+      <Item value="Close" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data">
+      <Item value="Odbc" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Parse" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DateTimePicker">
+      <Item value="Text" priority="3" />
+      <Item value="Value" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@OpenHBC.Login.currentPage">
+      <Item value="Dock" priority="0" />
+      <Item value="Name" priority="0" />
+      <Item value="Margin" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Odbc.OdbcDataReader">
+      <Item value="Close" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.KeyPressEventArgs">
+      <Item value="KeyChar" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Year" priority="0" />
+      <Item value="ToString" priority="6" />
+      <Item value="Date" priority="7" />
+      <Item value="ToShortDateString" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OpenHBC.Visit">
+      <Item value="VisitId" priority="0" />
+      <Item value="VisitDate" priority="0" />
+      <Item value="UserId" priority="0" />
+      <Item value="VisitName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@OpenHBC.Login.mainPanel">
+      <Item value="Refresh" priority="2" />
+      <Item value="Controls" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:string">
+      <Item value="ToString" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ArrayList">
+      <Item value="Add" priority="0" />
+      <Item value="RemoveAt" priority="0" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCellEventArgs">
+      <Item value="RowIndex" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application.StartupPath">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TabControl">
+      <Item value="SelectTab" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:object">
+      <Item value="ToString" priority="8" />
+      <Item value="GetType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.GroupBox">
+      <Item value="Text" priority="1" />
+      <Item value="ForeColor" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CrystalDecisions.Windows.Forms.CrystalReportViewer">
+      <Item value="ShowFirstPage" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control.ControlCollection">
+      <Item value="Clear" priority="2" />
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRow">
+      <Item value="Index" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@OpenHBC.Entity.CurrentPatient">
+      <Item value="PatientId" priority="2" />
+      <Item value="Visits" priority="5" />
+      <Item value="FirstName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.UserControl">
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Odbc.OdbcCommand">
+      <Item value="ExecuteReader" priority="0" />
+      <Item value="ExecuteScalar" priority="3" />
+      <Item value="ExecuteNonQuery" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridView">
+      <Item value="CurrentRow" priority="1" />
+      <Item value="CurrentCell" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:int">
+      <Item value="ToString" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@OpenHBC.Entity.db">
+      <Item value="runNonQuery" priority="0" />
+      <Item value="scalarValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.DockStyle">
+      <Item value="Fill" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <EditorManager>
+    <RecentFiles>
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/f:Admin.Designer.cs" caret="0" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/d:Sections/f:SectionsUI.Designer.cs" caret="0" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/d:Sections/f:AddSectionUI.Designer.cs" caret="0" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/d:UserRole/f:SecurityMgmtUI.cs" caret="4484" scrollPosition="0|121" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:Utilities/f:DataGridUtility.cs" caret="321" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/d:Sections/f:SectionsUI.cs" caret="2320" scrollPosition="0|52" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:Managers/f:SectionsMgr.cs" caret="2068" scrollPosition="0|52" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/f:Login.cs" caret="1459" scrollPosition="0|37" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/d:Compounds/f:CompoundsUI.Designer.cs" caret="100" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/d:Compounds/f:AddCompoundUI.cs" caret="1308" scrollPosition="0|32" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/d:Compounds/f:CompoundsUI.cs" caret="480" scrollPosition="0|17" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:Managers/f:CompoundsMgr.cs" caret="1511" scrollPosition="0|8" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/d:SiteConfig/f:SiteConfigUI.Designer.cs" caret="0" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/f:Concepts.cs" caret="511" scrollPosition="0|3" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/d:Sections/f:AddSectionUI.cs" caret="1122" scrollPosition="0|15" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:Utilities/f:Utility.cs" caret="751" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/f:Admin.cs" caret="1150" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:LocationProvider/f:LocationProvider.cs" caret="4030" scrollPosition="0|97" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:Security/f:Rights.cs" caret="0" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:Modules/d:HbcVisit/f:HbcVisit.Designer.cs" caret="0" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:Modules/d:HbcVisit/f:HbcVisit.cs" caret="1727" scrollPosition="0|64" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/f:Visit.cs" caret="120" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:AdminUI/d:SiteConfig/f:SiteConfigUI.cs" caret="371" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/d:Security/f:SecurityServiceProvider.cs" caret="9819" scrollPosition="0|33" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/f:RegPatient.cs" caret="0" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/f:RegPatient.Designer.cs" caret="0" scrollPosition="0|0" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/f:PatientSummary.cs" caret="3901" scrollPosition="0|81" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/f:CareVisit.cs" caret="939" scrollPosition="0|17" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/f:MysqlDbUtility.cs" caret="5620" scrollPosition="0|144" />
+      <File id="9CE276BF-8A80-4717-9188-C24F98C2D616/f:Entity.cs" caret="11439" scrollPosition="11|148" />
+    </RecentFiles>
+  </EditorManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <ReFormatCode>
+    <ReorderMembers>False</ReorderMembers>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+  </ReFormatCode>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+</Configuration>

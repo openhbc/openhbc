@@ -1,0 +1,158 @@
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\bin\Debug\OpenHBC.pdb
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.Login.resources
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.Properties.Resources.resources
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.csproj.GenerateResource.Cache
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.exe
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.pdb
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.MainLogin.resources
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ParentPage.resources
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.TestLogin.resources
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.HomeHbC.resources
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.PatientSearchList.resources
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe.config
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ReportsBrowser.resources
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.RegPatient.resources
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.PatientSummary.resources
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.HbcVisit.resources
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe.manifest
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\bin\Debug\OpenHBC.application
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.TrustInfo.xml
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.exe.manifest
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.application
+C:\Documents and Settings\Lungowe\Desktop\mush personal\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.patientList.rpt
+C:\OpenSource Zambia\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe.config
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.exe
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.pdb
+C:\OpenSource Zambia\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe.manifest
+C:\OpenSource Zambia\OpenHBC\OpenHBC\bin\Debug\OpenHBC.application
+C:\OpenSource Zambia\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe
+C:\OpenSource Zambia\OpenHBC\OpenHBC\bin\Debug\OpenHBC.pdb
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\ResolveAssemblyReference.cache
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.patientList.rpt
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.HbcVisit.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.HomeHbC.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.MainLogin.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ParentPage.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.Login.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.PatientSearchList.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.PatientSummary.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.Properties.Resources.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.RegPatient.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ReportsBrowser.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.SecurityMgmtUI.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.TestLogin.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.csproj.GenerateResource.Cache
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.TrustInfo.xml
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.exe.manifest
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.application
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Admin.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.UserRole.SecurityUserDetails.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.UserRole.RoleSecurityDetailsUI.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Sections.AddCompoundUI.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Sections.AddSectionUI.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Sections.CompoundUI.resources
+C:\OpenSource Zambia\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Sections.SectionsUI.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe.config
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.exe
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.pdb
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe.manifest
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\bin\Debug\OpenHBC.application
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\bin\Debug\OpenHBC.pdb
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\ResolveAssemblyReference.cache
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.patientList.rpt
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Admin.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Compounds.AddCompoundUI.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Compounds.CompoundsUI.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Sections.AddSectionUI.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Sections.SectionsUI.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.UserRole.RoleSecurityDetailsUI.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.UserRole.SecurityUserDetails.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.HbcVisit.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.HomeHbC.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.MainLogin.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ParentPage.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.Login.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.PatientSearchList.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.PatientSummary.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.Properties.Resources.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.RegPatient.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ReportsBrowser.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.SecurityMgmtUI.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.TestLogin.resources
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.csproj.GenerateResource.Cache
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.TrustInfo.xml
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.exe.manifest
+C:\OpenSource Zambia\openhbc_19 July 2009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.application
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe.config
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.exe
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.pdb
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe.manifest
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\bin\Debug\OpenHBC.application
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\bin\Debug\OpenHBC.pdb
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\ResolveAssemblyReference.cache
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.patientList.rpt
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Admin.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Compounds.AddCompoundUI.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Compounds.CompoundsUI.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Sections.AddSectionUI.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Sections.SectionsUI.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.UserRole.RoleSecurityDetailsUI.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.UserRole.SecurityUserDetails.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.HbcVisit.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.HomeHbC.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.MainLogin.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ParentPage.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.Login.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.PatientSearchList.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.PatientSummary.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.Properties.Resources.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.RegPatient.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ReportsBrowser.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.SecurityMgmtUI.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.TestLogin.resources
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.csproj.GenerateResource.Cache
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.TrustInfo.xml
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.exe.manifest
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.application
+C:\OpenSource Zambia\OpenHBC_30082009\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.SiteConfig.SiteConfigUI.resources
+C:\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe.config
+C:\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe.manifest
+C:\OpenHBC\OpenHBC\bin\Debug\OpenHBC.application
+C:\OpenHBC\OpenHBC\bin\Debug\OpenHBC.exe
+C:\OpenHBC\OpenHBC\bin\Debug\OpenHBC.pdb
+C:\OpenHBC\OpenHBC\obj\Debug\ResolveAssemblyReference.cache
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.rpt-all_patients.rpt
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.rpt-pmgt_patients.rpt
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Admin.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Compounds.AddCompoundUI.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Compounds.CompoundsUI.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Sections.AddSectionUI.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.Sections.SectionsUI.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.SiteConfig.SiteConfigUI.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.UserRole.RoleSecurityDetailsUI.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.AdminUI.UserRole.SecurityUserDetails.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.DateEntries.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ReportAllPatients.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.HbcVisit.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.HomeHbC.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.MainLogin.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ParentPage.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.Login.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.PatientSearchList.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.PatientSummary.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.Properties.Resources.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.RegPatient.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ReportPainManagement.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.ReportsBrowser.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.SecurityMgmtUI.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.TestLogin.resources
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.csproj.GenerateResource.Cache
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.TrustInfo.xml
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.exe.manifest
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.application
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.exe
+C:\OpenHBC\OpenHBC\obj\Debug\OpenHBC.pdb

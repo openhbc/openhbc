@@ -1,0 +1,386 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9CE276BF-8A80-4717-9188-C24F98C2D616}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenHBC</RootNamespace>
+    <AssemblyName>OpenHBC</AssemblyName>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>6CDE1EFE9DEB0DA4C22699AC9B2CBAAFFAEE0649</ManifestCertificateThumbprint>
+    <ManifestKeyFile>OpenHBC_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminUI\Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Compounds\AddCompoundUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Compounds\AddCompoundUI.Designer.cs">
+      <DependentUpon>AddCompoundUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Compounds\CompoundsUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Compounds\CompoundsUI.Designer.cs">
+      <DependentUpon>CompoundsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Sections\AddSectionUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Sections\AddSectionUI.Designer.cs">
+      <DependentUpon>AddSectionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\Sections\SectionsUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\Sections\SectionsUI.Designer.cs">
+      <DependentUpon>SectionsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\SiteConfig\SiteConfigUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\SiteConfig\SiteConfigUI.Designer.cs">
+      <DependentUpon>SiteConfigUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\UserRole\RoleSecurityDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\UserRole\RoleSecurityDetails.Designer.cs">
+      <DependentUpon>RoleSecurityDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\UserRole\SecurityUserDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\UserRole\SecurityUserDetails.Designer.cs">
+      <DependentUpon>SecurityUserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CareVisit.cs" />
+    <Compile Include="Concepts.cs" />
+    <Compile Include="DateEntries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DateEntries.Designer.cs">
+      <DependentUpon>DateEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAllPatients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportAllPatients.Designer.cs">
+      <DependentUpon>ReportAllPatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt-all_patients.cs">
+      <DependentUpon>rpt-all_patients.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DatabaseUtility.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Interfaces\ISecureableUI.cs" />
+    <Compile Include="LocationProvider\LocationProvider.cs" />
+    <Compile Include="Managers\CompoundsMgr.cs" />
+    <Compile Include="Managers\SectionsMgr.cs" />
+    <Compile Include="Modules\HbcVisit\HbcVisit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\HbcVisit\HbcVisit.Designer.cs">
+      <DependentUpon>HbcVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeHbC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomeHbC.Designer.cs">
+      <DependentUpon>HomeHbC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPasswordEncrypt.cs" />
+    <Compile Include="MonthlyCareVisit.cs" />
+    <Compile Include="MysqlDbUtility.cs" />
+    <Compile Include="Patient.cs" />
+    <Compile Include="PatientSearchList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatientSearchList.Designer.cs">
+      <DependentUpon>PatientSearchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatientSummary.Designer.cs">
+      <DependentUpon>PatientSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegPatient.Designer.cs">
+      <DependentUpon>RegPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPainManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportPainManagement.Designer.cs">
+      <DependentUpon>ReportPainManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportsBrowser.Designer.cs">
+      <DependentUpon>ReportsBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\UserRole\SecurityMgmtUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\UserRole\SecurityMgmtUI.Designer.cs">
+      <DependentUpon>SecurityMgmtUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\Rights.cs" />
+    <Compile Include="Security\SecurityRole.cs" />
+    <Compile Include="Security\SecurityServiceProvider.cs" />
+    <Compile Include="Security\User.cs" />
+    <Compile Include="Security\UserRights.cs" />
+    <Compile Include="rpt-pmgt_patients.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt-pmgt_patients.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TestLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestLogin.Designer.cs">
+      <DependentUpon>TestLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainLogin.Designer.cs">
+      <DependentUpon>MainLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainParentPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainParentPage.Designer.cs">
+      <DependentUpon>mainParentPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminUI\Admin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\Compounds\AddCompoundUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddCompoundUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\Compounds\CompoundsUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CompoundsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\Sections\AddSectionUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddSectionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\Sections\SectionsUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SectionsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\SiteConfig\SiteConfigUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SiteConfigUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\UserRole\RoleSecurityDetails.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RoleSecurityDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\UserRole\SecurityUserDetails.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SecurityUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateEntries.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DateEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAllPatients.resx">
+      <DependentUpon>ReportAllPatients.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt-all_patients.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt-all_patients.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\HbcVisit\HbcVisit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HbcVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeHbC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HomeHbC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainLogin.resx">
+      <DependentUpon>MainLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainParentPage.resx">
+      <DependentUpon>mainParentPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientSearchList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PatientSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientSummary.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PatientSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegPatient.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RegPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPainManagement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportPainManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsBrowser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportsBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\UserRole\SecurityMgmtUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SecurityMgmtUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt-pmgt_patients.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt-pmgt_patients.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestLogin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utilities\DataGridUtility.cs" />
+    <Compile Include="Utilities\Utility.cs" />
+    <Compile Include="Visit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ohbc-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ohbc-logo-smallx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenHBC_TemporaryKey.pfx" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Resources\osz1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UIControls\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(SolutionDir)*.rpt" "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

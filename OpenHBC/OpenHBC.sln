@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenHBC", "OpenHBC.csproj", "{9CE276BF-8A80-4717-9188-C24F98C2D616}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2FB2EBD-8418-4DEF-A776-273A92734E56}"
+	ProjectSection(SolutionItems) = preProject
+		..\OpenHBC.vsd = ..\OpenHBC.vsd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CE276BF-8A80-4717-9188-C24F98C2D616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE276BF-8A80-4717-9188-C24F98C2D616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE276BF-8A80-4717-9188-C24F98C2D616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE276BF-8A80-4717-9188-C24F98C2D616}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
