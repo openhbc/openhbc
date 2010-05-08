@@ -102,18 +102,12 @@ namespace OpenHBC
                 query = "select patientid,surname,firstname,sex,dateofbirth from registration";
             }
             string [][] result=  multiColRowResult(query);
-            //these are to be used to convert date of birth to age.
-            string result2 = "";  //stores the date from db
-            string result3 = ""; 
-           // string result3 = "";
             if(result != null)
             {
                 int i = 0;
                 foreach(string[] row in result)
                 {
-                    result2 = DateTime.Parse(row[4]).ToString("dd MMMM yyyy");
-                   // result3 = result2 -
-                    result[i++][4] = DateTime.Parse(result3).ToString("dd MMMM yyyy");
+                    result[i++][4] = DateTime.Parse(row[4]).ToString("dd MMMM yyyy");
                 }
             }
             return result;
