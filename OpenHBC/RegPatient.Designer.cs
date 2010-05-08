@@ -365,12 +365,12 @@ namespace OpenHBC
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(406, 386);
+            this.label9.Location = new System.Drawing.Point(349, 386);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(158, 53);
+            this.label9.Size = new System.Drawing.Size(215, 53);
             this.label9.TabIndex = 13;
-            this.label9.Text = "Number of Children Under 21";
+            this.label9.Text = "Number of Dependants Under 21";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // cbxBreadWinner

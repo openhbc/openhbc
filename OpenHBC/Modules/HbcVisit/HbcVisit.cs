@@ -89,20 +89,23 @@ namespace OpenHBC
                 {
                     txtTransferedto.Text = visit.TransferedTo;
                 }
-                if(visit.ReceivedPainManagement == "1")
+                if (visit.ReceivedPainManagement == "1")
                 {
                     chkbxPainMgmnt.Checked = true;
+                    cboLevel.Text = visit.PainManagementLevel.ToString();
                 }
                 if(visit.DischargeOrTranfer == "0")
                 {
                     rdDischarge.Checked = true;
+                    
                 }
                 else if(visit.DischargeOrTranfer == "1")
                 {
                     rdTransfer.Checked = true;
                 }
 
-                txtTransferedto.Text = visit.TransferedTo;
+               // txtTransferedto.Text = visit.TransferedTo;
+                txtReferPMgt.Text = visit.ReferPainManagement;
             }
         }
 
@@ -168,6 +171,11 @@ namespace OpenHBC
             if (chkbxPainMgmnt.Checked)
             {
                 visit.ReceivedPainManagement = "1";
+                visit.PainManagementLevel = Int32.Parse(cboLevel.Text);
+                if (cboLevel.Text == "3")
+                {
+                    visit.ReferPainManagement = txtReferPMgt.Text;
+                }
             }
             else
             {

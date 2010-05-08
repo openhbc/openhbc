@@ -343,7 +343,7 @@ namespace OpenHBC
             // chkbxPainMgmnt
             // 
             this.chkbxPainMgmnt.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkbxPainMgmnt.Location = new System.Drawing.Point(30, 160);
+            this.chkbxPainMgmnt.Location = new System.Drawing.Point(15, 160);
             this.chkbxPainMgmnt.Name = "chkbxPainMgmnt";
             this.chkbxPainMgmnt.Size = new System.Drawing.Size(119, 39);
             this.chkbxPainMgmnt.TabIndex = 7;
@@ -373,11 +373,11 @@ namespace OpenHBC
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(319, 168);
+            this.label11.Location = new System.Drawing.Point(290, 168);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 16);
+            this.label11.Size = new System.Drawing.Size(95, 16);
             this.label11.TabIndex = 13;
-            this.label11.Text = "Refer To";
+            this.label11.Text = "Pain Refer To";
             // 
             // txtReferPMgt
             // 
@@ -391,7 +391,7 @@ namespace OpenHBC
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(174, 171);
+            this.label9.Location = new System.Drawing.Point(155, 169);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 16);
             this.label9.TabIndex = 9;
@@ -405,7 +405,7 @@ namespace OpenHBC
             "1",
             "2",
             "3"});
-            this.cboLevel.Location = new System.Drawing.Point(223, 165);
+            this.cboLevel.Location = new System.Drawing.Point(200, 165);
             this.cboLevel.Name = "cboLevel";
             this.cboLevel.Size = new System.Drawing.Size(69, 24);
             this.cboLevel.TabIndex = 8;

@@ -1,1 +1,330 @@
- 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Segoe UI" Size="9" />
+  <Class Name="OpenHBC.AdminUI.Admin" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdminUI\Admin.cs</FileName>
+      <HashCode>AAAAIAAQCCAAACEAAACAAEACAAAgAAgAAAABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.AdminUI.Compounds.AddCompoundUI" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdminUI\Compounds\AddCompoundUI.cs</FileName>
+      <HashCode>AAAAAAAAACQCABEBAQjAhGACAAAAgAAkAAAAggEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.AdminUI.Compounds.CompoundsUI" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdminUI\Compounds\CompoundsUI.cs</FileName>
+      <HashCode>AAIBAAAAACAADBIAAACAAIASAAAAAEBAAQCAAAAAIIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.AdminUI.Sections.AddSectionUI" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdminUI\Sections\AddSectionUI.cs</FileName>
+      <HashCode>AAAAAAICACAAABEhAQCAgEACCAAAAkABAAAAAEAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.AdminUI.Sections.SectionsUI" Collapsed="true">
+    <Position X="7" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdminUI\Sections\SectionsUI.cs</FileName>
+      <HashCode>AiBQBAQAACAACCIAAACIAIACAAAAAABBAgAAAAAQIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.AdminUI.SiteConfig.SiteConfigUI" Collapsed="true">
+    <Position X="7" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdminUI\SiteConfig\SiteConfigUI.cs</FileName>
+      <HashCode>AAAAAAAAACAgABEAAQGAAEAGAAAEABAAAAAAoAIAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.AdminUI.UserRole.RoleSecurityDetailsUI" Collapsed="true">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdminUI\UserRole\RoleSecurityDetails.cs</FileName>
+      <HashCode>AAAAAAAAAKAAAIEAEADAAEACAAAAABEAAQABQAIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.AdminUI.UserRole.SecurityUserDetails" Collapsed="true">
+    <Position X="5.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdminUI\UserRole\SecurityUserDetails.cs</FileName>
+      <HashCode>AgggAAAAASACAIEAAACBEEACAABAAJAABlBAAAICAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.SecurityMgmtUI" Collapsed="true">
+    <Position X="8.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdminUI\UserRole\SecurityMgmtUI.cs</FileName>
+      <HashCode>IARAUgEAADACAEAADiCIEAACqAAAQAAQAAAARBEAIDY=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.CareVisit" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CareVisit.cs</FileName>
+      <HashCode>gAGIAAAAAIBUABEAAAJAAAGCIAMAAiEIAEEQAAIAcCA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Concepts" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Concepts.cs</FileName>
+      <HashCode>EAgEACCABCEIBAUgAAAQAAAAAAAAAAAAAECIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.DatabaseUtility" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DatabaseUtility.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAQAAAAAAAAAAIAAAAgAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.DateEntries" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DateEntries.cs</FileName>
+      <HashCode>AAAAAAAAACAAADACAACAAAgDQAAAAQgAAAAAAAAAKAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Entity" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entity.cs</FileName>
+      <HashCode>AgEAQARAAIAQBA4AgHggAGAAAAwAAMACGAACQAEIQCA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.HomeHbC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>HomeHbC.cs</FileName>
+      <HashCode>IAAAoIIAkCAAFBAAABiBAAACACBABAAgACFACAIAAAI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenHBC.OpenhbcMd5" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IPasswordEncrypt.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenHBC.Login" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Login.cs</FileName>
+      <HashCode>AAAAIAAAACAAAAAAAACAAAACAAAAAAAAAAAIAgAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.MainLogin" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MainLogin.cs</FileName>
+      <HashCode>AAgAgAABECAAABAAAACAAAECACAACAAAAhAAAQBAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.ParentPage" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>mainParentPage.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.HbcVisit" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Modules\HbcVisit\HbcVisit.cs</FileName>
+      <HashCode>PAAEogCIAGABEJOBhSCE4EYCEgQIABiAACEgAQ4IAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenHBC.MonthlyCareVisit" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MonthlyCareVisit.cs</FileName>
+      <HashCode>AAAhAAAAEAAAAAAAAAAQAAACAAAAAAAAAAAAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.MysqlDbUtility" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MysqlDbUtility.cs</FileName>
+      <HashCode>gAAAAAAACAEAACAABMAQAQAAFAAAAAAAgAAAAAFAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Patient" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Patient.cs</FileName>
+      <HashCode>FQgEEGARBSAABAcAAASUJAAAVBAQAAAAAACBAIAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.PatientSearchList" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PatientSearchList.cs</FileName>
+      <HashCode>BAABAAAAACJAABAEAECEAIACQAgAAAhAAAAQAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.PatientSummary" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PatientSummary.cs</FileName>
+      <HashCode>MQB9oAAAACIAABEAAADAANAGAChoAIAAASBAAAYEAAg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OpenHBC.Program" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Program.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.RegPatient" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RegPatient.cs</FileName>
+      <HashCode>EAAABCICASESBBGBAQiDDEACUBRAJBAAMABBAgJAEUA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.ReportAllPatients" Collapsed="true">
+    <Position X="8.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ReportAllPatients.cs</FileName>
+      <HashCode>AAAAAAAAACAAAgEAAACAAAACAAIAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.ReportPainManagement" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ReportPainManagement.cs</FileName>
+      <HashCode>AAAAAAAAACAQIgMAAgCCQAArDAIAIAAAQAQAgMAACCA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.ReportsBrowser" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ReportsBrowser.cs</FileName>
+      <HashCode>AQgAAAAAICAAABEAQACAAMACAAAAAAAAAAAAIQABAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.rpt_all_patients" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>rpt-all_patients.cs</FileName>
+      <HashCode>AAgAAAAJAAAQAAAAAAAIAAAAAAAAAAAACAABAAAABAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.rpt_pmgt_patients" Collapsed="true">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>rpt-pmgt_patients.cs</FileName>
+      <HashCode>AAgAAAAJAAAQAAAAAAAIAAAAAAAAAAAACAABAAAABAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.TestLogin" Collapsed="true">
+    <Position X="8.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>TestLogin.cs</FileName>
+      <HashCode>ACAAAAAAACAAABAQAACAAAACAAAAAAAAEAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Visit" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Visit.cs</FileName>
+      <HashCode>AACAAAAAUQAAAAAQAAIQAAgAIAAAgMQKACAAAEAwAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.LocationProvider.LocationProvider" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>LocationProvider\LocationProvider.cs</FileName>
+      <HashCode>AgAABAAAAAAAAAAAACgAgQAAAAAAAAAAAAAAAAACAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Managers.CompoundsMgr" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Managers\CompoundsMgr.cs</FileName>
+      <HashCode>AAABgAAAAAAAAgIAAACAAAAAAAAAAAAAAAAgAAABIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Managers.SectionsMgr" Collapsed="true">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Managers\SectionsMgr.cs</FileName>
+      <HashCode>AQAAgAAICAAgEAAAABAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Security.SecurityRole" Collapsed="true">
+    <Position X="10.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Security\SecurityRole.cs</FileName>
+      <HashCode>AAAAAEIUAAAAAAAAAAIAAgAABAAAAAAAAAQQEAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Security.SecurityServiceProvider" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Security\SecurityServiceProvider.cs</FileName>
+      <HashCode>SoAAASgAAAAQAAAEARIAAAAAAQAgAgAAAAIAAEAAAgI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Security.User" Collapsed="true">
+    <Position X="10.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Security\User.cs</FileName>
+      <HashCode>AAAAAEABAAAAAAAAAAAAAAgABAgABAgAAQIAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Security.UserRights" Collapsed="true">
+    <Position X="5.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Security\UserRights.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Utilities.DataGridUtility" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Utilities\DataGridUtility.cs</FileName>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHBC.Utilities.Utility" Collapsed="true">
+    <Position X="7" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Utilities\Utility.cs</FileName>
+      <HashCode>AAAAAAAAAAAQAABCAAAAACAAAAEAAAAAAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="OpenHBC.IPasswordEncrypt" Collapsed="true">
+    <Position X="9" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IPasswordEncrypt.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="OpenHBC.Interfaces.ISecureableUI" Collapsed="true">
+    <Position X="10.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interfaces\ISecureableUI.cs</FileName>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="OpenHBC.Security.Rights" Collapsed="true">
+    <Position X="9" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Security\Rights.cs</FileName>
+      <HashCode>AAACAAAAAAQAAAEAAAAAEAAAAABAAABAAAEAAAAIACA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>

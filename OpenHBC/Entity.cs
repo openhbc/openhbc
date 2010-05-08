@@ -288,14 +288,20 @@ namespace OpenHBC
                                                         transferedTo = '{15}',
                                                         receivedCounselling = {16},
                                                         painManagementLevel = {17}, 
-                                                        referPainManagement = {18}, 
+                                                        referPainManagement = '{18}', 
                                                         hasDied = {19}, 
                                                         dateDied = {20}, 
                                                         receivedAdheranceCounselling = {21} where visitId = {1}",
-                                  mcv.PatientId, mcv.VisitId, formartDateForMySQL(mcv.VisitDate), parseString(mcv.ClinicalFindings),
-                                  parseString(mcv.Treatment), parseString(mcv.Remarks), mcv.UserId, mcv.SiteId, parseable(mcv.ReceivedPainManagement), parseable(mcv.ConfirmedHivStatus), parseable(mcv.IsOnART), parseable(mcv.IsAdhering),
-                                  parseable(mcv.ReceivedSupplement), parseString(mcv.NameOfReceivedSupplement), parseable(mcv.DischargeOrTranfer), parseString(mcv.TransferedTo), parseable(mcv.ReceivedCounselling),
-                                  mcv.PainManagementLevel, parseable(mcv.ReferPainManagement), mcv.HasDied, formartDateForMySQL(mcv.DateDied), mcv.ReceivedAdheranceCounselling);
+                                  mcv.PatientId, mcv.VisitId, formartDateForMySQL(mcv.VisitDate), 
+                                  parseString(mcv.ClinicalFindings),parseString(mcv.Treatment), 
+                                  parseString(mcv.Remarks), mcv.UserId, 
+                                  mcv.SiteId, parseable(mcv.ReceivedPainManagement), 
+                                  parseable(mcv.ConfirmedHivStatus), parseable(mcv.IsOnART), 
+                                  parseable(mcv.IsAdhering), parseable(mcv.ReceivedSupplement), 
+                                  parseString(mcv.NameOfReceivedSupplement), parseable(mcv.DischargeOrTranfer), 
+                                  parseString(mcv.TransferedTo), parseable(mcv.ReceivedCounselling),
+                                  mcv.PainManagementLevel, parseable(mcv.ReferPainManagement), 
+                                  mcv.HasDied, formartDateForMySQL(mcv.DateDied), mcv.ReceivedAdheranceCounselling);
 
             }
             db.runNonQuery(query);

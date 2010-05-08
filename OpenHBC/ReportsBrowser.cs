@@ -29,6 +29,7 @@ namespace OpenHBC
         {
             string btnName = ((Button)sender).Text;
             Login.refreshPanel(new DateEntries(btnName));
+            //Changed this to allow for some user interaction (for now just selecting the date)
             //Login.refreshPanel(new ReportPainManagement(btnName));
         }
         
