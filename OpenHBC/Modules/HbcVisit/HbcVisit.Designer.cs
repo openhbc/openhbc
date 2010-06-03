@@ -39,7 +39,12 @@ namespace OpenHBC
             this.chkbxCounseled = new System.Windows.Forms.CheckBox();
             this.chkbxOnArt = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkbxConfirmedNegative = new System.Windows.Forms.CheckBox();
+            this.artStatuslbl = new System.Windows.Forms.Label();
+            this.onARTStatus = new System.Windows.Forms.ComboBox();
+            this.otherChkBox = new System.Windows.Forms.CheckBox();
+            this.dotsChkBox = new System.Windows.Forms.CheckBox();
+            this.tbCounselChkBox = new System.Windows.Forms.CheckBox();
+            this.tbConfirmedChkBox = new System.Windows.Forms.CheckBox();
             this.gpbxIsClientAdhering = new System.Windows.Forms.GroupBox();
             this.chkbxAdheranceCounselling = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,6 +63,7 @@ namespace OpenHBC
             this.label9 = new System.Windows.Forms.Label();
             this.cboLevel = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.otherSupplementNamelbl = new System.Windows.Forms.Label();
             this.cboNameOfSuppliment = new System.Windows.Forms.ComboBox();
             this.dtpDied = new System.Windows.Forms.DateTimePicker();
             this.chkbxDied = new System.Windows.Forms.CheckBox();
@@ -72,18 +78,28 @@ namespace OpenHBC
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNameOfSupplement = new System.Windows.Forms.TextBox();
+            this.tbAdherenceGrpBox = new System.Windows.Forms.GroupBox();
+            this.tbAdherenceChkBox = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dotsRadioBtnNo = new System.Windows.Forms.RadioButton();
+            this.dotsRadioBtnYes = new System.Windows.Forms.RadioButton();
+            this.otherGroupBox = new System.Windows.Forms.GroupBox();
+            this.otherDiseaseTextBox = new System.Windows.Forms.TextBox();
+            this.patientNameLbl = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gpbxIsClientAdhering.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.grpDischargeOrTranfer.SuspendLayout();
+            this.tbAdherenceGrpBox.SuspendLayout();
+            this.otherGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 38);
+            this.label1.Location = new System.Drawing.Point(26, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 19);
@@ -103,6 +119,7 @@ namespace OpenHBC
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.MouseHover += new System.EventHandler(this.btnCancel_MouseHover);
             // 
             // btnSave
             // 
@@ -161,7 +178,7 @@ namespace OpenHBC
             // chkbxConfirmedPositive
             // 
             this.chkbxConfirmedPositive.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkbxConfirmedPositive.Location = new System.Drawing.Point(149, 24);
+            this.chkbxConfirmedPositive.Location = new System.Drawing.Point(120, 24);
             this.chkbxConfirmedPositive.Name = "chkbxConfirmedPositive";
             this.chkbxConfirmedPositive.Size = new System.Drawing.Size(93, 37);
             this.chkbxConfirmedPositive.TabIndex = 7;
@@ -172,50 +189,115 @@ namespace OpenHBC
             // chkbxCounseled
             // 
             this.chkbxCounseled.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkbxCounseled.Enabled = false;
-            this.chkbxCounseled.Location = new System.Drawing.Point(273, 22);
+            this.chkbxCounseled.Location = new System.Drawing.Point(221, 4);
             this.chkbxCounseled.Name = "chkbxCounseled";
-            this.chkbxCounseled.Size = new System.Drawing.Size(108, 44);
+            this.chkbxCounseled.Size = new System.Drawing.Size(119, 56);
             this.chkbxCounseled.TabIndex = 7;
-            this.chkbxCounseled.Text = "Received Counselling";
+            this.chkbxCounseled.Text = "Received HIV Counselling";
             this.chkbxCounseled.UseVisualStyleBackColor = true;
+            this.chkbxCounseled.Visible = false;
+            this.chkbxCounseled.CheckedChanged += new System.EventHandler(this.chkbxCounseled_CheckedChanged);
             // 
             // chkbxOnArt
             // 
             this.chkbxOnArt.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkbxOnArt.Enabled = false;
-            this.chkbxOnArt.Location = new System.Drawing.Point(425, 19);
+            this.chkbxOnArt.Location = new System.Drawing.Point(348, 8);
             this.chkbxOnArt.Name = "chkbxOnArt";
-            this.chkbxOnArt.Size = new System.Drawing.Size(63, 44);
+            this.chkbxOnArt.Size = new System.Drawing.Size(68, 44);
             this.chkbxOnArt.TabIndex = 7;
             this.chkbxOnArt.Text = "Is On ART?";
             this.chkbxOnArt.UseVisualStyleBackColor = true;
+            this.chkbxOnArt.Visible = false;
             this.chkbxOnArt.CheckedChanged += new System.EventHandler(this.chkbxOnArt_CheckedChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.chkbxConfirmedNegative);
+            this.groupBox1.Controls.Add(this.artStatuslbl);
+            this.groupBox1.Controls.Add(this.onARTStatus);
+            this.groupBox1.Controls.Add(this.otherChkBox);
+            this.groupBox1.Controls.Add(this.dotsChkBox);
+            this.groupBox1.Controls.Add(this.tbCounselChkBox);
+            this.groupBox1.Controls.Add(this.tbConfirmedChkBox);
             this.groupBox1.Controls.Add(this.gpbxIsClientAdhering);
             this.groupBox1.Controls.Add(this.chkbxConfirmedPositive);
             this.groupBox1.Controls.Add(this.chkbxOnArt);
             this.groupBox1.Controls.Add(this.chkbxCounseled);
             this.groupBox1.Location = new System.Drawing.Point(29, 158);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(920, 76);
+            this.groupBox1.Size = new System.Drawing.Size(920, 94);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tick appropriately";
             // 
-            // chkbxConfirmedNegative
+            // artStatuslbl
             // 
-            this.chkbxConfirmedNegative.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkbxConfirmedNegative.Location = new System.Drawing.Point(14, 23);
-            this.chkbxConfirmedNegative.Name = "chkbxConfirmedNegative";
-            this.chkbxConfirmedNegative.Size = new System.Drawing.Size(94, 37);
-            this.chkbxConfirmedNegative.TabIndex = 9;
-            this.chkbxConfirmedNegative.Text = "Confirmed HIV -";
-            this.chkbxConfirmedNegative.UseVisualStyleBackColor = true;
-            this.chkbxConfirmedNegative.CheckedChanged += new System.EventHandler(this.chkbxConfirmedNegative_CheckedChanged);
+            this.artStatuslbl.AutoSize = true;
+            this.artStatuslbl.Location = new System.Drawing.Point(431, 18);
+            this.artStatuslbl.Name = "artStatuslbl";
+            this.artStatuslbl.Size = new System.Drawing.Size(99, 16);
+            this.artStatuslbl.TabIndex = 14;
+            this.artStatuslbl.Text = "On ART Status";
+            this.artStatuslbl.Visible = false;
+            // 
+            // onARTStatus
+            // 
+            this.onARTStatus.FormattingEnabled = true;
+            this.onARTStatus.Items.AddRange(new object[] {
+            "NON_OI",
+            "OI",
+            "EOL"});
+            this.onARTStatus.Location = new System.Drawing.Point(434, 41);
+            this.onARTStatus.Name = "onARTStatus";
+            this.onARTStatus.Size = new System.Drawing.Size(92, 24);
+            this.onARTStatus.TabIndex = 13;
+            this.onARTStatus.Visible = false;
+            this.onARTStatus.MouseHover += new System.EventHandler(this.onARTStatus_MouseHover);
+            // 
+            // otherChkBox
+            // 
+            this.otherChkBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.otherChkBox.Location = new System.Drawing.Point(15, 62);
+            this.otherChkBox.Name = "otherChkBox";
+            this.otherChkBox.Size = new System.Drawing.Size(94, 37);
+            this.otherChkBox.TabIndex = 12;
+            this.otherChkBox.Text = "Other Disease";
+            this.otherChkBox.UseVisualStyleBackColor = true;
+            this.otherChkBox.CheckedChanged += new System.EventHandler(this.otherChkBox_CheckedChanged);
+            // 
+            // dotsChkBox
+            // 
+            this.dotsChkBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dotsChkBox.Location = new System.Drawing.Point(348, 48);
+            this.dotsChkBox.Name = "dotsChkBox";
+            this.dotsChkBox.Size = new System.Drawing.Size(68, 44);
+            this.dotsChkBox.TabIndex = 11;
+            this.dotsChkBox.Text = "Is On DOTS?";
+            this.dotsChkBox.UseVisualStyleBackColor = true;
+            this.dotsChkBox.Visible = false;
+            this.dotsChkBox.CheckedChanged += new System.EventHandler(this.dotsChkBox_CheckedChanged);
+            // 
+            // tbCounselChkBox
+            // 
+            this.tbCounselChkBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tbCounselChkBox.Location = new System.Drawing.Point(221, 48);
+            this.tbCounselChkBox.Name = "tbCounselChkBox";
+            this.tbCounselChkBox.Size = new System.Drawing.Size(119, 44);
+            this.tbCounselChkBox.TabIndex = 11;
+            this.tbCounselChkBox.Text = "Received TB Counselling";
+            this.tbCounselChkBox.UseVisualStyleBackColor = true;
+            this.tbCounselChkBox.Visible = false;
+            this.tbCounselChkBox.CheckedChanged += new System.EventHandler(this.tbCounselChkBox_CheckedChanged);
+            // 
+            // tbConfirmedChkBox
+            // 
+            this.tbConfirmedChkBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tbConfirmedChkBox.Location = new System.Drawing.Point(14, 23);
+            this.tbConfirmedChkBox.Name = "tbConfirmedChkBox";
+            this.tbConfirmedChkBox.Size = new System.Drawing.Size(94, 37);
+            this.tbConfirmedChkBox.TabIndex = 9;
+            this.tbConfirmedChkBox.Text = "Confirmed TB";
+            this.tbConfirmedChkBox.UseVisualStyleBackColor = true;
+            this.tbConfirmedChkBox.CheckedChanged += new System.EventHandler(this.chkbxConfirmedNegative_CheckedChanged);
             // 
             // gpbxIsClientAdhering
             // 
@@ -224,19 +306,21 @@ namespace OpenHBC
             this.gpbxIsClientAdhering.Controls.Add(this.rdIsAdheringNo);
             this.gpbxIsClientAdhering.Controls.Add(this.rdIsAdheringYes);
             this.gpbxIsClientAdhering.Enabled = false;
-            this.gpbxIsClientAdhering.Location = new System.Drawing.Point(532, 10);
+            this.gpbxIsClientAdhering.Location = new System.Drawing.Point(525, -1);
             this.gpbxIsClientAdhering.Name = "gpbxIsClientAdhering";
-            this.gpbxIsClientAdhering.Size = new System.Drawing.Size(382, 54);
+            this.gpbxIsClientAdhering.Size = new System.Drawing.Size(417, 54);
             this.gpbxIsClientAdhering.TabIndex = 8;
             this.gpbxIsClientAdhering.TabStop = false;
+            this.gpbxIsClientAdhering.Text = "HIV Adherence";
+            this.gpbxIsClientAdhering.Visible = false;
             // 
             // chkbxAdheranceCounselling
             // 
             this.chkbxAdheranceCounselling.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkbxAdheranceCounselling.Enabled = false;
-            this.chkbxAdheranceCounselling.Location = new System.Drawing.Point(257, 10);
+            this.chkbxAdheranceCounselling.Location = new System.Drawing.Point(287, 10);
             this.chkbxAdheranceCounselling.Name = "chkbxAdheranceCounselling";
-            this.chkbxAdheranceCounselling.Size = new System.Drawing.Size(108, 41);
+            this.chkbxAdheranceCounselling.Size = new System.Drawing.Size(109, 41);
             this.chkbxAdheranceCounselling.TabIndex = 8;
             this.chkbxAdheranceCounselling.Text = "Adherance Counselling";
             this.chkbxAdheranceCounselling.UseVisualStyleBackColor = true;
@@ -246,14 +330,15 @@ namespace OpenHBC
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 16);
+            this.label6.Size = new System.Drawing.Size(167, 16);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Is Client Adhering";
+            this.label6.Text = "Is Client Adhering to ART";
             // 
             // rdIsAdheringNo
             // 
             this.rdIsAdheringNo.AutoSize = true;
-            this.rdIsAdheringNo.Location = new System.Drawing.Point(196, 20);
+            this.rdIsAdheringNo.Enabled = false;
+            this.rdIsAdheringNo.Location = new System.Drawing.Point(233, 20);
             this.rdIsAdheringNo.Name = "rdIsAdheringNo";
             this.rdIsAdheringNo.Size = new System.Drawing.Size(43, 20);
             this.rdIsAdheringNo.TabIndex = 0;
@@ -264,7 +349,8 @@ namespace OpenHBC
             // rdIsAdheringYes
             // 
             this.rdIsAdheringYes.AutoSize = true;
-            this.rdIsAdheringYes.Location = new System.Drawing.Point(142, 20);
+            this.rdIsAdheringYes.Enabled = false;
+            this.rdIsAdheringYes.Location = new System.Drawing.Point(187, 20);
             this.rdIsAdheringYes.Name = "rdIsAdheringYes";
             this.rdIsAdheringYes.Size = new System.Drawing.Size(48, 20);
             this.rdIsAdheringYes.TabIndex = 0;
@@ -286,19 +372,19 @@ namespace OpenHBC
             // 
             this.txtClinicalFindings.Enabled = false;
             this.txtClinicalFindings.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClinicalFindings.Location = new System.Drawing.Point(170, 35);
+            this.txtClinicalFindings.Location = new System.Drawing.Point(170, 18);
             this.txtClinicalFindings.Margin = new System.Windows.Forms.Padding(4);
             this.txtClinicalFindings.MaxLength = 100;
             this.txtClinicalFindings.Multiline = true;
             this.txtClinicalFindings.Name = "txtClinicalFindings";
-            this.txtClinicalFindings.Size = new System.Drawing.Size(351, 64);
+            this.txtClinicalFindings.Size = new System.Drawing.Size(351, 50);
             this.txtClinicalFindings.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 110);
+            this.label2.Location = new System.Drawing.Point(63, 77);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 19);
@@ -309,19 +395,19 @@ namespace OpenHBC
             // 
             this.txtDiagnosis.Enabled = false;
             this.txtDiagnosis.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiagnosis.Location = new System.Drawing.Point(170, 107);
+            this.txtDiagnosis.Location = new System.Drawing.Point(170, 74);
             this.txtDiagnosis.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiagnosis.MaxLength = 100;
             this.txtDiagnosis.Multiline = true;
             this.txtDiagnosis.Name = "txtDiagnosis";
-            this.txtDiagnosis.Size = new System.Drawing.Size(351, 45);
+            this.txtDiagnosis.Size = new System.Drawing.Size(351, 41);
             this.txtDiagnosis.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(72, 220);
+            this.label3.Location = new System.Drawing.Point(72, 180);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 19);
@@ -332,18 +418,18 @@ namespace OpenHBC
             // 
             this.txtComments.Enabled = false;
             this.txtComments.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComments.Location = new System.Drawing.Point(170, 202);
+            this.txtComments.Location = new System.Drawing.Point(170, 162);
             this.txtComments.Margin = new System.Windows.Forms.Padding(4);
             this.txtComments.MaxLength = 100;
             this.txtComments.Multiline = true;
             this.txtComments.Name = "txtComments";
-            this.txtComments.Size = new System.Drawing.Size(351, 80);
+            this.txtComments.Size = new System.Drawing.Size(351, 66);
             this.txtComments.TabIndex = 4;
             // 
             // chkbxPainMgmnt
             // 
             this.chkbxPainMgmnt.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkbxPainMgmnt.Location = new System.Drawing.Point(15, 160);
+            this.chkbxPainMgmnt.Location = new System.Drawing.Point(15, 120);
             this.chkbxPainMgmnt.Name = "chkbxPainMgmnt";
             this.chkbxPainMgmnt.Size = new System.Drawing.Size(119, 39);
             this.chkbxPainMgmnt.TabIndex = 7;
@@ -364,16 +450,16 @@ namespace OpenHBC
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtClinicalFindings);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(29, 247);
+            this.groupBox2.Location = new System.Drawing.Point(29, 326);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(539, 301);
+            this.groupBox2.Size = new System.Drawing.Size(539, 235);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(290, 168);
+            this.label11.Location = new System.Drawing.Point(290, 128);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(95, 16);
             this.label11.TabIndex = 13;
@@ -382,7 +468,7 @@ namespace OpenHBC
             // txtReferPMgt
             // 
             this.txtReferPMgt.Enabled = false;
-            this.txtReferPMgt.Location = new System.Drawing.Point(387, 165);
+            this.txtReferPMgt.Location = new System.Drawing.Point(387, 125);
             this.txtReferPMgt.MaxLength = 100;
             this.txtReferPMgt.Name = "txtReferPMgt";
             this.txtReferPMgt.Size = new System.Drawing.Size(134, 22);
@@ -391,7 +477,7 @@ namespace OpenHBC
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(155, 169);
+            this.label9.Location = new System.Drawing.Point(155, 129);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 16);
             this.label9.TabIndex = 9;
@@ -405,7 +491,7 @@ namespace OpenHBC
             "1",
             "2",
             "3"});
-            this.cboLevel.Location = new System.Drawing.Point(200, 165);
+            this.cboLevel.Location = new System.Drawing.Point(200, 125);
             this.cboLevel.Name = "cboLevel";
             this.cboLevel.Size = new System.Drawing.Size(69, 24);
             this.cboLevel.TabIndex = 8;
@@ -413,6 +499,7 @@ namespace OpenHBC
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.otherSupplementNamelbl);
             this.groupBox3.Controls.Add(this.cboNameOfSuppliment);
             this.groupBox3.Controls.Add(this.dtpDied);
             this.groupBox3.Controls.Add(this.chkbxDied);
@@ -421,11 +508,21 @@ namespace OpenHBC
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.txtNameOfSupplement);
             this.groupBox3.Controls.Add(this.chkbxReceivedSupp);
-            this.groupBox3.Location = new System.Drawing.Point(574, 247);
+            this.groupBox3.Location = new System.Drawing.Point(574, 291);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(375, 300);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
+            // 
+            // otherSupplementNamelbl
+            // 
+            this.otherSupplementNamelbl.AutoSize = true;
+            this.otherSupplementNamelbl.Location = new System.Drawing.Point(6, 83);
+            this.otherSupplementNamelbl.Name = "otherSupplementNamelbl";
+            this.otherSupplementNamelbl.Size = new System.Drawing.Size(181, 16);
+            this.otherSupplementNamelbl.TabIndex = 15;
+            this.otherSupplementNamelbl.Text = "Name of Other Supplement";
+            this.otherSupplementNamelbl.Visible = false;
             // 
             // cboNameOfSuppliment
             // 
@@ -437,11 +534,13 @@ namespace OpenHBC
             "Nuts",
             "Maize",
             "Maize Meal",
-            "Milk"});
+            "Milk",
+            "Other"});
             this.cboNameOfSuppliment.Location = new System.Drawing.Point(186, 47);
             this.cboNameOfSuppliment.Name = "cboNameOfSuppliment";
             this.cboNameOfSuppliment.Size = new System.Drawing.Size(166, 24);
             this.cboNameOfSuppliment.TabIndex = 14;
+            this.cboNameOfSuppliment.SelectedIndexChanged += new System.EventHandler(this.cboNameOfSuppliment_SelectedIndexChanged);
             // 
             // dtpDied
             // 
@@ -452,6 +551,8 @@ namespace OpenHBC
             this.dtpDied.Name = "dtpDied";
             this.dtpDied.Size = new System.Drawing.Size(139, 27);
             this.dtpDied.TabIndex = 11;
+            this.dtpDied.Value = new System.DateTime(1753, 1, 2, 0, 0, 0, 0);
+            this.dtpDied.ValueChanged += new System.EventHandler(this.dtpDied_ValueChanged);
             // 
             // chkbxDied
             // 
@@ -570,6 +671,97 @@ namespace OpenHBC
             this.txtNameOfSupplement.Name = "txtNameOfSupplement";
             this.txtNameOfSupplement.Size = new System.Drawing.Size(166, 22);
             this.txtNameOfSupplement.TabIndex = 8;
+            this.txtNameOfSupplement.Visible = false;
+            // 
+            // tbAdherenceGrpBox
+            // 
+            this.tbAdherenceGrpBox.Controls.Add(this.tbAdherenceChkBox);
+            this.tbAdherenceGrpBox.Controls.Add(this.label12);
+            this.tbAdherenceGrpBox.Controls.Add(this.dotsRadioBtnNo);
+            this.tbAdherenceGrpBox.Controls.Add(this.dotsRadioBtnYes);
+            this.tbAdherenceGrpBox.Location = new System.Drawing.Point(555, 199);
+            this.tbAdherenceGrpBox.Name = "tbAdherenceGrpBox";
+            this.tbAdherenceGrpBox.Size = new System.Drawing.Size(416, 54);
+            this.tbAdherenceGrpBox.TabIndex = 11;
+            this.tbAdherenceGrpBox.TabStop = false;
+            this.tbAdherenceGrpBox.Text = "TB Adherence";
+            this.tbAdherenceGrpBox.Visible = false;
+            this.tbAdherenceGrpBox.MouseHover += new System.EventHandler(this.tbAdherenceGrpBox_MouseHover);
+            // 
+            // tbAdherenceChkBox
+            // 
+            this.tbAdherenceChkBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tbAdherenceChkBox.Enabled = false;
+            this.tbAdherenceChkBox.Location = new System.Drawing.Point(287, 10);
+            this.tbAdherenceChkBox.Name = "tbAdherenceChkBox";
+            this.tbAdherenceChkBox.Size = new System.Drawing.Size(108, 41);
+            this.tbAdherenceChkBox.TabIndex = 8;
+            this.tbAdherenceChkBox.Text = "Adherance Counselling";
+            this.tbAdherenceChkBox.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(177, 16);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Is Client Adhering to DOTS";
+            this.label12.MouseHover += new System.EventHandler(this.label12_MouseHover);
+            // 
+            // dotsRadioBtnNo
+            // 
+            this.dotsRadioBtnNo.AutoSize = true;
+            this.dotsRadioBtnNo.Enabled = false;
+            this.dotsRadioBtnNo.Location = new System.Drawing.Point(233, 20);
+            this.dotsRadioBtnNo.Name = "dotsRadioBtnNo";
+            this.dotsRadioBtnNo.Size = new System.Drawing.Size(43, 20);
+            this.dotsRadioBtnNo.TabIndex = 0;
+            this.dotsRadioBtnNo.TabStop = true;
+            this.dotsRadioBtnNo.Text = "No";
+            this.dotsRadioBtnNo.UseVisualStyleBackColor = true;
+            // 
+            // dotsRadioBtnYes
+            // 
+            this.dotsRadioBtnYes.AutoSize = true;
+            this.dotsRadioBtnYes.Enabled = false;
+            this.dotsRadioBtnYes.Location = new System.Drawing.Point(186, 20);
+            this.dotsRadioBtnYes.Name = "dotsRadioBtnYes";
+            this.dotsRadioBtnYes.Size = new System.Drawing.Size(48, 20);
+            this.dotsRadioBtnYes.TabIndex = 0;
+            this.dotsRadioBtnYes.TabStop = true;
+            this.dotsRadioBtnYes.Text = "Yes";
+            this.dotsRadioBtnYes.UseVisualStyleBackColor = true;
+            // 
+            // otherGroupBox
+            // 
+            this.otherGroupBox.Controls.Add(this.otherDiseaseTextBox);
+            this.otherGroupBox.Location = new System.Drawing.Point(29, 259);
+            this.otherGroupBox.Name = "otherGroupBox";
+            this.otherGroupBox.Size = new System.Drawing.Size(521, 78);
+            this.otherGroupBox.TabIndex = 12;
+            this.otherGroupBox.TabStop = false;
+            this.otherGroupBox.Text = "Other Disease Particulars";
+            this.otherGroupBox.Visible = false;
+            // 
+            // otherDiseaseTextBox
+            // 
+            this.otherDiseaseTextBox.Location = new System.Drawing.Point(9, 21);
+            this.otherDiseaseTextBox.Multiline = true;
+            this.otherDiseaseTextBox.Name = "otherDiseaseTextBox";
+            this.otherDiseaseTextBox.Size = new System.Drawing.Size(512, 51);
+            this.otherDiseaseTextBox.TabIndex = 0;
+            // 
+            // patientNameLbl
+            // 
+            this.patientNameLbl.AutoSize = true;
+            this.patientNameLbl.Font = new System.Drawing.Font("Arial", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientNameLbl.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.patientNameLbl.Location = new System.Drawing.Point(412, 39);
+            this.patientNameLbl.Name = "patientNameLbl";
+            this.patientNameLbl.Size = new System.Drawing.Size(131, 22);
+            this.patientNameLbl.TabIndex = 13;
+            this.patientNameLbl.Text = "Patient Name";
             // 
             // HbcVisit
             // 
@@ -579,6 +771,9 @@ namespace OpenHBC
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.patientNameLbl);
+            this.Controls.Add(this.otherGroupBox);
+            this.Controls.Add(this.tbAdherenceGrpBox);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -591,9 +786,10 @@ namespace OpenHBC
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HbcVisit";
-            this.Size = new System.Drawing.Size(1085, 551);
+            this.Size = new System.Drawing.Size(1085, 594);
             this.Load += new System.EventHandler(this.HbcVisit_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.gpbxIsClientAdhering.ResumeLayout(false);
             this.gpbxIsClientAdhering.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -602,10 +798,16 @@ namespace OpenHBC
             this.groupBox3.PerformLayout();
             this.grpDischargeOrTranfer.ResumeLayout(false);
             this.grpDischargeOrTranfer.PerformLayout();
+            this.tbAdherenceGrpBox.ResumeLayout(false);
+            this.tbAdherenceGrpBox.PerformLayout();
+            this.otherGroupBox.ResumeLayout(false);
+            this.otherGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+        
 
         #endregion
 
@@ -640,7 +842,7 @@ namespace OpenHBC
         private System.Windows.Forms.RadioButton rdDischarge;
         private System.Windows.Forms.TextBox txtTransferedto;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox chkbxConfirmedNegative;
+        private System.Windows.Forms.CheckBox tbConfirmedChkBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboLevel;
         private System.Windows.Forms.Label label11;
@@ -653,5 +855,19 @@ namespace OpenHBC
         private System.Windows.Forms.CheckBox chkbxAdheranceCounselling;
         private System.Windows.Forms.RadioButton rdRefer;
         private System.Windows.Forms.ComboBox cboNameOfSuppliment;
+        private System.Windows.Forms.CheckBox tbCounselChkBox;
+        private System.Windows.Forms.CheckBox dotsChkBox;
+        private System.Windows.Forms.GroupBox tbAdherenceGrpBox;
+        private System.Windows.Forms.CheckBox tbAdherenceChkBox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.RadioButton dotsRadioBtnNo;
+        private System.Windows.Forms.RadioButton dotsRadioBtnYes;
+        private System.Windows.Forms.CheckBox otherChkBox;
+        private System.Windows.Forms.GroupBox otherGroupBox;
+        private System.Windows.Forms.TextBox otherDiseaseTextBox;
+        private System.Windows.Forms.ComboBox onARTStatus;
+        private System.Windows.Forms.Label artStatuslbl;
+        private System.Windows.Forms.Label otherSupplementNamelbl;
+        private System.Windows.Forms.Label patientNameLbl;
     }
 }

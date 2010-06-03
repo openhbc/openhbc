@@ -13,35 +13,37 @@ namespace OpenHBC.AdminUI
 {
     public partial class Admin : UserControl
     {
-        public Admin()
+        Login parent;
+        public Admin(Login parent)
         {
+            this.parent = parent;
             InitializeComponent();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Entity.CurrentPatient = null;
-            Login.refreshPanel(new HomeHbC());
+            parent.SetUserControl(new HomeHbC(parent));
         }
 
         private void btnSecurity_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new SecurityMgmtUI());
+            parent.SetUserControl(new SecurityMgmtUI(parent));
         }
 
         private void btnSections_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new SectionsUI());
+            parent.SetUserControl(new SectionsUI(parent));
         }
 
         private void btnCompounds_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new CompoundsUI());
+            parent.SetUserControl(new CompoundsUI(parent));
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new SiteConfigUI());
+            parent.SetUserControl(new SiteConfigUI(parent));
         }
     }
 }

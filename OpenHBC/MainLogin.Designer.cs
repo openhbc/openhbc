@@ -47,12 +47,12 @@ namespace OpenHBC
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.username);
-            this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.ForeColor = System.Drawing.SystemColors.Control;
             this.panel1.Location = new System.Drawing.Point(-2, -2);

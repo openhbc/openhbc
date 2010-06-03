@@ -12,14 +12,17 @@ namespace OpenHBC.AdminUI.UserRole
 {
     public partial class SecurityUserDetails : UserControl
     {
+        Login parent;
         private User _user;
-        public SecurityUserDetails()
+        public SecurityUserDetails(Login p)
         {
+            parent = p;
             InitializeComponent();
         }
         
-        public SecurityUserDetails(User user)
+        public SecurityUserDetails(User user, Login p)
         {
+            parent = p;
             InitializeComponent();
             _user = user;
             populateFormFromUser(user);
@@ -54,12 +57,12 @@ namespace OpenHBC.AdminUI.UserRole
                 SecurityServiceProvider.AddNewUser(tmpUser, txtPassword.Text);
             }
 
-            Login.refreshPanel(new SecurityMgmtUI());
+            parent.SetUserControl(new SecurityMgmtUI(parent));
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new SecurityMgmtUI());
+            parent.SetUserControl(new SecurityMgmtUI(parent));
         }
     }
 }

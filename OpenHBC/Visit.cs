@@ -15,14 +15,13 @@ namespace OpenHBC
         private int _userId;
         private int _painManagementLevel;
         private int _hasDied;
-        private int _receivedAdheranceCounselling;
+        private int _adhereingToHIVCounselling;
     
         public Visit(string visitType, string visitName)
         {
             this._visitType = visitType;
             this._visitName = visitName;
         }
-
         public int VisitId
         {
             set
@@ -35,7 +34,6 @@ namespace OpenHBC
                 return _visitID;
             }
         }
-
         public string VisitType
         {
             set
@@ -80,8 +78,7 @@ namespace OpenHBC
             {
                 return _visitDate;
             }
-        }
-        
+        }        
         public int PatientId
         {
             set
@@ -94,7 +91,6 @@ namespace OpenHBC
                 return _patientId;
             }
         }
-
         public int SiteId
         {
             get
@@ -106,7 +102,6 @@ namespace OpenHBC
                 _siteId = value;
             }
         }
-
         public int UserId
         {
             get
@@ -118,8 +113,6 @@ namespace OpenHBC
                 _userId = value;
             }
         }
-
-
         public int PainManagementLevel
         {
             set
@@ -132,7 +125,6 @@ namespace OpenHBC
                 return _painManagementLevel;
             }
         }
-
         public int HasDied
         {
             set
@@ -145,17 +137,16 @@ namespace OpenHBC
                 return _hasDied;
             }
         }
-
         public int ReceivedAdheranceCounselling
         {
             set
             {
-                _receivedAdheranceCounselling = value;
+                _adhereingToHIVCounselling = value;
 
             }
             get
             {
-                return _receivedAdheranceCounselling;
+                return _adhereingToHIVCounselling;
             }
         }
 

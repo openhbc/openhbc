@@ -12,6 +12,7 @@ namespace OpenHBC
 {
     public partial class ReportPainManagement : UserControl
     {
+        Login parent;
         ReportDocument reportdoc = new ReportDocument();
         MysqlDbUtility db = new MysqlDbUtility();
         string reportSql;
@@ -22,9 +23,9 @@ namespace OpenHBC
         private static DateTime _endDate;
 
 
-        public ReportPainManagement(string reportName)
+        public ReportPainManagement(string reportName, Login parent)
         {
-            
+            this.parent = parent;
             InitializeComponent();
 
             //Get text from the text property of the buttons that have been pressed
@@ -144,12 +145,12 @@ namespace OpenHBC
 
         private void btnBackToReportList_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new ReportsBrowser());
+            parent.SetUserControl(new ReportsBrowser(parent));
         }
 
         private void btnBackToReportList_Click_1(object sender, EventArgs e)
         {
-            Login.refreshPanel(new ReportsBrowser());
+            parent.SetUserControl(new ReportsBrowser(parent));
         }
 
     }

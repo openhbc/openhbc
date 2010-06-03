@@ -22,7 +22,7 @@ namespace OpenHBC
 
         public MysqlDbUtility()
         {
-            ConStr = "DRIVER={MySQL ODBC 5.1 Driver};SERVER=localhost;DATABASE=openhbcdb;UID=hbc;PWD=12345;OPTION=3";
+            ConStr = "DRIVER={MySQL ODBC 3.51 Driver};SERVER=localhost;DATABASE=openhbcdb;UID=hbc;PWD=12345;OPTION=3";
             OdbcCon = new System.Data.Odbc.OdbcConnection(ConStr);
             //OdbcCon.Open();
 
@@ -280,6 +280,22 @@ namespace OpenHBC
             {
                 return null;
             }
+        }
+
+        public DataSet1 GetAllPatients()
+        {
+            DataSet1 set = new DataSet1();
+            try
+            {
+                OdbcCon.Open();
+                OdbcCom = new OdbcCommand("Select * from Registration", OdbcCon);
+                //OdbcCom.CommandType = CommandType.StoredProcedure;
+                OdbcDataAdapter adapter = new OdbcDataAdapter(OdbcCom);
+                adapter.Fill(set);
+            }
+            catch { }
+            return set;
+
         }
 
         public DataSet getDataSet(string query)

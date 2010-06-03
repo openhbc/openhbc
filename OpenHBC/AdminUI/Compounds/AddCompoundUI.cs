@@ -12,10 +12,12 @@ namespace OpenHBC.AdminUI.Compounds
 {
     public partial class AddCompoundUI : UserControl
     {
+        Login parent;
         private Concepts regConcepts = new Concepts();
         private LocationProvider.LocationProvider locprov = new OpenHBC.LocationProvider.LocationProvider();
-        public AddCompoundUI()
+        public AddCompoundUI(Login p)
         {
+            parent = p;
             InitializeComponent();
             cbxParish.Items.AddRange(regConcepts.Sites);
 
@@ -76,7 +78,7 @@ namespace OpenHBC.AdminUI.Compounds
                 CompoundsMgr.EditCompound(Int32.Parse(lblCompoundId.Text), txtCompoundName.Text, cbxSection.Text ,txtComments.Text);
             }
 
-            Login.refreshPanel(new CompoundsUI());
+            parent.SetUserControl(new CompoundsUI(parent));
         }
 
         private void AddCompoundUI_Load(object sender, EventArgs e)
@@ -111,7 +113,7 @@ namespace OpenHBC.AdminUI.Compounds
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new CompoundsUI());
+            parent.SetUserControl(new CompoundsUI(parent));
         }
     }
 }

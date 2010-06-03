@@ -13,11 +13,13 @@ namespace OpenHBC
         private static UserControl currentPage;
         public Login()
         {
-            currentPage = new MainLogin();
+            //currentPage = new MainLogin(this);
             InitializeComponent();
-            this.Text = currentPage.Name;
-            currentPage.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(currentPage);
+            
+
+            //this.Text = currentPage.Name;
+            //currentPage.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(new MainLogin(this));
             
             mainPanel.Refresh();
             
@@ -28,13 +30,13 @@ namespace OpenHBC
             set
             {
 
-                mainPanel.Controls.Remove(currentPage);
-                mainPanel.Controls.Clear();
+                //mainPanel.Controls.Remove(currentPage);
+                //mainPanel.Controls.Clear();
                 currentPage = value;
                 currentPage.Dock = DockStyle.Fill;
                 //this.Text = currentPage.Name;
-                mainPanel.Controls.Add(currentPage);
-                mainPanel.Refresh();
+                //mainPanel.Controls.Add(currentPage);
+                //mainPanel.Refresh();
             }
 
             get
@@ -52,6 +54,15 @@ namespace OpenHBC
             CurrentPage = control;
             CurrentPage.AutoSize = true;
             CurrentPage.Dock = DockStyle.Fill;
+            //mainPanel.Refresh();
+        }
+
+        public void SetUserControl(UserControl child)
+        {
+            this.clearPanel();
+            mainPanel.Controls.Add(child);
+            this.Text = child.Text;
+            child.Dock = DockStyle.Fill;
             mainPanel.Refresh();
         }
 

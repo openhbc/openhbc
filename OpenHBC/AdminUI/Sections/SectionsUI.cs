@@ -12,8 +12,10 @@ namespace OpenHBC.AdminUI.Sections
 {
     public partial class SectionsUI : UserControl
     {
-        public SectionsUI()
+        Login parent;
+        public SectionsUI(Login parent)
         {
+            this.parent = parent;
             InitializeComponent();
             loadGrid();
         }
@@ -40,12 +42,12 @@ namespace OpenHBC.AdminUI.Sections
 
         private void btnAddSection_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new AddSectionUI());
+            parent.SetUserControl(new AddSectionUI(parent));
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new Admin());
+            parent.SetUserControl(new Admin(parent));
         }
 
         private void btnDeleteSection_Click(object sender, EventArgs e)
@@ -57,7 +59,7 @@ namespace OpenHBC.AdminUI.Sections
                 int id = Int32.Parse(DataGridUtility.GetValue(dataGridSections.CurrentRow, 3).ToString());
 
                 SectionsMgr.deleteSection(id.ToString());
-                Login.refreshPanel(new SectionsUI());
+                parent.SetUserControl(new SectionsUI(parent));
             }
         }
 
@@ -73,7 +75,7 @@ namespace OpenHBC.AdminUI.Sections
             string SectionName = DataGridUtility.GetValue(dataGridSections.CurrentRow, 0).ToString();   //2 is comment
 
 
-            Login.refreshPanel(new AddSectionUI(id, SectionName, Comments, SiteName));
+            parent.SetUserControl(new AddSectionUI(id, SectionName, Comments, SiteName));
         }
 
         

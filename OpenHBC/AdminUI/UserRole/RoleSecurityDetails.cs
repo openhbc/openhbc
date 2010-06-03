@@ -13,14 +13,17 @@ namespace OpenHBC.AdminUI.UserRole
     public partial class RoleSecurityDetailsUI : UserControl
     {
         private SecurityRole _role;
+        Login parent;
         private CheckBox[] checkBoxList = new CheckBox[SecurityServiceProvider.GetRightList().Length];
-        public RoleSecurityDetailsUI()
+        public RoleSecurityDetailsUI(Login p)
         {
+            parent = p;
             InitializeComponent();
             grpRights_Layout();
         }
-        public RoleSecurityDetailsUI(SecurityRole role)
+        public RoleSecurityDetailsUI(SecurityRole role, Login p)
         {
+            parent = p;
             InitializeComponent();
             grpRights_Layout();
             populateFromRole(role);
@@ -136,12 +139,12 @@ namespace OpenHBC.AdminUI.UserRole
             {
                 Entity.AddNewSecurityRole(txtBxRoleName.Text, rightsListNames);
             }
-            Login.refreshPanel(new SecurityMgmtUI(1));
+            parent.SetUserControl(new SecurityMgmtUI(1,parent));
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new SecurityMgmtUI(1));
+            parent.SetUserControl(new SecurityMgmtUI(1,parent));
         }
     }
 }

@@ -28,26 +28,24 @@ namespace OpenHBC
         /// </summary>
         private void InitializeComponent()
         {
-            mainPanel = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
-            mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            mainPanel.Location = new System.Drawing.Point(0, 0);
-            mainPanel.Name = "mainPanel";
-            mainPanel.Size = new System.Drawing.Size(1080, 615);
-            mainPanel.TabIndex = 0;
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1030, 615);
+            this.mainPanel.TabIndex = 0;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 615);
-            this.Controls.Add(mainPanel);
+            this.ClientSize = new System.Drawing.Size(1030, 615);
+            this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = true;
-            this.MinimizeBox = true;
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
@@ -56,7 +54,8 @@ namespace OpenHBC
 
         #endregion
 
-        private static System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Panel mainPanel;
+
 
 
 

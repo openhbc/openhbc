@@ -9,10 +9,11 @@
     </UpdateUrlHistory>
     <BootstrapperUrlHistory>
     </BootstrapperUrlHistory>
-    <ApplicationRevision>1</ApplicationRevision>
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
-    <ReferencePath>C:\Program Files\Common Files\Business Objects\2.7\Managed\</ReferencePath>
+    <ReferencePath>c:\Program Files\Business Objects\Common\2.8\managed\C:\Program Files\Common Files\Business Objects\2.7\Managed\</ReferencePath>
     <ProjectView>ShowAllFiles</ProjectView>
+    <ErrorReportUrlHistory>
+    </ErrorReportUrlHistory>
   </PropertyGroup>
 </Project>

@@ -10,9 +10,11 @@ namespace OpenHBC.AdminUI.SiteConfig
 {
     public partial class SiteConfigUI : UserControl
     {
+        Login parent;
         private Concepts regConcepts = new Concepts();
-        public SiteConfigUI()
+        public SiteConfigUI(Login parent)
         {
+            this.parent = parent;
             InitializeComponent();
             InitialiseCombos();
         }
@@ -32,12 +34,12 @@ namespace OpenHBC.AdminUI.SiteConfig
         private void btnSave_Click(object sender, EventArgs e)
         {
             LocationProvider.LocationProvider.SetCurrentSiteDetails(cbxSitesName.SelectedItem.ToString());
-            Login.refreshPanel(new Admin());
+            parent.SetUserControl(new Admin(parent));
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new Admin());
+            parent.SetUserControl(new Admin(parent));
         }
     }
 }

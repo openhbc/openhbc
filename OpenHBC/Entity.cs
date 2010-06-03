@@ -143,8 +143,11 @@ namespace OpenHBC
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(dateTime.Year + "-" + dateTime.Month + "-" + dateTime.Day);
+            string date = sb.ToString();
+            if (date.Equals("1-1-1"))
+                date = "0-0-0";
 
-            return sb.ToString();
+            return date;
 
         }
 
@@ -166,8 +169,8 @@ namespace OpenHBC
             ArrayList visits = new ArrayList();
             string[][] result;
             string query =
-                string.Format(
-                    @"select patientid, visitID, visit_date,clinical_findings,treatment,remarks,userId,siteId,receivedPainManagement,confirmedHIVStatus,isOnART,isAdhering,receivedSupplement,nameOfSupplement,dischargeOrTransfer,transferedTo,receivedCounselling,painManagementLevel, referPainManagement, hasDied, dateDied, receivedAdheranceCounselling from monthly_care_visit where patientId ={0}",
+                string.Format(@"select * from monthly_care_visit where patientId ={0}",
+                    //@"select patientid, visitID, visit_date,clinical_findings,treatment,remarks,userId,siteId,receivedPainManagement,confirmedHIVStatus,isOnART,isAdhering,receivedSupplement,nameOfSupplement,dischargeOrTransfer,transferedTo,receivedCounselling,painManagementLevel, referPainManagement, hasDied, dateDied, receivedAdheranceCounselling from monthly_care_visit where patientId ={0}",
                     patientId);
 
             result = db.multiColRowResult(query);
@@ -178,16 +181,55 @@ namespace OpenHBC
             foreach (string[] visit in result)
             {
                 DateTime tempDateDied = System.DateTime.Parse("01/01/2001 00:00:00");
-                int tempDied = Int32.Parse(parseAsInt(visit[19]));
+                int tempDied = Int32.Parse(parseAsInt(visit[22]));
                 if ( tempDied < 1) 
                 {
                     tempDateDied = System.DateTime.Parse("01/01/2001 00:00:00");
                 }
-                else {
-                    tempDateDied = System.DateTime.Parse(visit[20]);
-                     }
-                //                                          int patientid,                  int visitId,             DateTime visitdate,     string ,      string , string,                  int ,                            int siteId,                    int receivedPainManagement, int confirmedHivStatus,          int receivedCounselling,               int isOnART,                                   int isAdhering,                 int receivedSupplement, string ,               int ,                       string )
-                visits.Add(new CareVisit(Int32.Parse(parseAsInt(visit[0])), Int32.Parse(parseAsInt(visit[1])), System.DateTime.Parse(visit[2]), visit[3], visit[4], visit[5], Int32.Parse(parseAsInt(visit[6])), Int32.Parse(visit[7]), visit[8], visit[9], visit[10], visit[11], visit[12], visit[13], visit[14], visit[15], visit[16], Int32.Parse(parseAsInt(visit[17])), visit[18], Int32.Parse(parseAsInt(visit[19])), tempDateDied, Int32.Parse(parseAsInt(visit[21]))));
+                else 
+                {
+                    tempDateDied = System.DateTime.Parse(visit[23]);
+                }
+                //int pid = Int32.Parse(parseAsInt(visit[0]));
+                int patientid = Int32.Parse(parseAsInt(visit[0]));
+                int visitId = Int32.Parse(parseAsInt(visit[1]));
+                DateTime visitdate = System.DateTime.Parse(visit[2]);
+                string clinicalfindings = visit[3];
+                string treatment = visit[4];
+                string remarks = visit[5];
+                int userId = Int32.Parse(parseAsInt(visit[6]));
+                int siteId = Int32.Parse(parseAsInt(visit[7]));
+                string receivedPainManagement = visit[8];
+                string confirmedHivStatus = visit[9];
+                string isOnART = visit[10];
+                string isAdheringToART = visit[11];
+                string receivedSupplement = visit[12];
+                string nameReceivedSupplement = visit[13];
+                string dischargeOrTransfer = visit[14];
+                string transferedTo = visit[15];
+                string receivedHIVCounselling = visit[16];
+                string isTBPositive = visit[17];
+                int isOnDots = Int32.Parse(parseAsInt(visit[18]));
+                int adhereToDots = Int32.Parse(parseAsInt(visit[19]));
+                int painManagementLevel = Int32.Parse(parseAsInt(visit[20]));
+                string referPainManagement = visit[21];
+                int hasDied = Int32.Parse(parseAsInt(visit[22]));
+                //DateTime dateDied = DateTime.Parse(visit[23]);
+                int isOtherDisease = Int32.Parse(parseAsInt(visit[24]));
+                int hasTBCounselling = Int32.Parse(parseAsInt(visit[25]));
+                int adhereingToTBCounselling = Int32.Parse(parseAsInt(visit[26]));
+                string otherDiseaseDetails = visit[27];
+                string onARTStatus = visit[28];
+                int adheranceToHIVCounselling = Int32.Parse(parseAsInt(visit[29]));
+                //                     int patientid,                  int visitId,             DateTime visitdate,     string ,      string , string,                  int ,                         int siteId,  int receivedPainManagement, int confirmedHivStatus,          int receivedCounselling,               int isOnART,                                   int isAdhering,                 int receivedSupplement, string ,               int ,                       string )
+                //visits.Add(new CareVisit(pid, Int32.Parse(parseAsInt(visit[1])), System.DateTime.Parse(visit[2]), visit[3], visit[4], visit[5], Int32.Parse(parseAsInt(visit[6])), Int32.Parse(visit[7]), visit[8], visit[9], visit[10], visit[11], visit[12], visit[13], visit[14], visit[15], visit[16], visit[17], Int32.Parse(parseAsInt(visit[18])), visit[19], Int32.Parse(parseAsInt(visit[20])), tempDateDied, Int32.Parse(parseAsInt(visit[22]))));
+                visits.Add(new CareVisit( patientid,  visitId,  visitdate,  clinicalfindings,  treatment,
+                          remarks,  userId,  siteId,  receivedPainManagement,  confirmedHivStatus,
+                          isOnART,  isAdheringToART,  receivedSupplement,  nameReceivedSupplement,
+                          dischargeOrTransfer,  transferedTo,  receivedHIVCounselling,
+                          isTBPositive,  isOnDots,  adhereToDots,  painManagementLevel,  referPainManagement,
+                          hasDied,  tempDateDied,  isOtherDisease,  hasTBCounselling,  adhereingToTBCounselling,
+                          otherDiseaseDetails,  onARTStatus,  adheranceToHIVCounselling));
             }
 
             return visits;
@@ -261,16 +303,117 @@ namespace OpenHBC
             if (!visitIdExist(mcv.VisitId))
             {
                 query =
-                    string.Format("insert into monthly_care_visit values( {0},{1},'{2}','{3}','{4}','{5}',{6},{7},{8},{9},{10},{11},{12},'{13}',{14},'{15}',{16},{17},'{18}',{19},{20},{21})",
-                                  mcv.PatientId, mcv.VisitId, formartDateForMySQL(mcv.VisitDate), parseString(mcv.ClinicalFindings), parseString(mcv.Treatment), parseString(mcv.Remarks), mcv.UserId, 
-                                  mcv.SiteId, parseable(mcv.ReceivedPainManagement), parseable(mcv.ConfirmedHivStatus), parseable(mcv.IsOnART), parseable(mcv.IsAdhering), parseable(mcv.ReceivedSupplement), 
-                                  parseString(mcv.NameOfReceivedSupplement), parseable(mcv.DischargeOrTranfer), parseString(mcv.TransferedTo),  parseable(mcv.ReceivedCounselling), mcv.PainManagementLevel, 
-                                  parseable(mcv.ReferPainManagement), mcv.HasDied, formartDateForMySQL(mcv.DateDied), mcv.ReceivedAdheranceCounselling);
+                    string.Format("insert into monthly_care_visit values( {0},{1},'{2}','{3}','{4}','{5}',{6},{7},'{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}',{18},{19},{20},'{21}',{22},'{23}',{24},{25},{26},'{27}','{28}',{29})",
+                                  mcv.PatientId,
+                                  mcv.VisitId,
+                                  formartDateForMySQL(mcv.VisitDate),
+                                  parseString(mcv.ClinicalFindings),
+                                  parseString(mcv.Treatment),
+                                  parseString(mcv.Remarks),
+                                  mcv.UserId,
+                                  mcv.SiteId,
+                                  parseable(mcv.ReceivedPainManagement),
+                                  parseable(mcv.ConfirmedHivStatus),                                  
+                                  parseable(mcv.IsOnART),
+                                  parseable(mcv.IsAdhering),
+                                  parseable(mcv.ReceivedSupplement), 
+                                  parseString(mcv.NameOfReceivedSupplement),
+                                  parseable(mcv.DischargeOrTranfer),
+                                  parseString(mcv.TransferedTo),
+                                  parseable(mcv.ReceivedCounselling),
+                                  parseable(mcv.TBStatus),
+                                  mcv.IsOnDOTS,
+                                  mcv.IsAdhereToDOTS,
+                                  mcv.PainManagementLevel, 
+                                  parseable(mcv.ReferPainManagement),
+                                  mcv.HasDied,
+                                  formartDateForMySQL(mcv.DateDied),
+                                  mcv.IsOtherDisease,
+                                  mcv.HasTBCounselling,
+                                  mcv.AdhereingToTBCounselling,
+                                  parseable(mcv.OtherDiseaseDetails),
+                                  mcv.OnARTStatus,
+                                  mcv.ReceivedAdheranceCounselling);
             }                                                           
             else
             {
                 query =
-                    string.Format(@"UPDATE monthly_care_visit SET patientid= {0}, 
+                        string.Format(@"UPDATE monthly_care_visit SET patientId = {0},
+                                                visitId = {1},
+                                                visit_date = '{2}',
+                                                clinical_findings = '{3}',
+                                                treatment = '{4}',
+                                                remarks = '{5}',
+                                                userId = {6},
+                                                siteid = {7},
+                                                receivedpainmanagement = '{8}',
+                                                confirmedhivstatus = '{9}',
+                                                isOnArt = '{10}',
+                                                isAdheringtoART = '{11}',
+                                                receivedSupplement = '{12}',
+                                                nameOfSupplement = '{13}',
+                                                dischargeortransfer = '{14}',
+                                                transferedTo = '{15}',
+                                                receivedHIVCounselling = '{16}',
+                                                isTBPositive = '{17}',
+                                                isOnDOTS = {18},
+                                                AdhereToDOTS = {19},
+                                                painManagementLevel = {20},
+                                                referPainManagement = '{21}',
+                                                hasDied = {22},
+                                                dateDied = '{23}',
+                                                IsOtherDisease = {24},
+                                                hasTBCounselling = {25},
+                                                adhereingToTBCounselling = {26},
+                                                OtherDiseaseDetails = '{27}',
+                                                OnARTStatus = '{28}',
+                                                adherancetoHIVCounselling = {29} where visitId = {1}",
+                                                                                     mcv.PatientId,
+                                      mcv.VisitId,
+                                      formartDateForMySQL(mcv.VisitDate),
+                                      parseString(mcv.ClinicalFindings),
+                                      parseString(mcv.Treatment),
+                                      parseString(mcv.Remarks),
+                                      mcv.UserId,
+                                      mcv.SiteId,
+                                      parseable(mcv.ReceivedPainManagement),
+                                      parseable(mcv.ConfirmedHivStatus),
+                                      parseable(mcv.IsOnART),
+                                      parseable(mcv.IsAdhering),
+                                      parseable(mcv.ReceivedSupplement),
+                                      parseString(mcv.NameOfReceivedSupplement),
+                                      parseable(mcv.DischargeOrTranfer),
+                                      parseString(mcv.TransferedTo),
+                                      parseable(mcv.ReceivedCounselling),
+                                      parseable(mcv.TBStatus),
+                                      mcv.IsOnDOTS,
+                                      mcv.IsAdhereToDOTS,
+                                      mcv.PainManagementLevel,
+                                      parseable(mcv.ReferPainManagement),
+                                      mcv.HasDied,
+                                      formartDateForMySQL(mcv.DateDied),
+                                      mcv.IsOtherDisease,
+                                      mcv.HasTBCounselling,
+                                      mcv.AdhereingToTBCounselling,
+                                      parseable(mcv.OtherDiseaseDetails),
+                                      mcv.OnARTStatus,
+                                      mcv.ReceivedAdheranceCounselling);
+                                  /*
+                                  mcv.PatientId, mcv.VisitId, formartDateForMySQL(mcv.VisitDate), 
+                                  parseString(mcv.ClinicalFindings),parseString(mcv.Treatment), 
+                                  parseString(mcv.Remarks), mcv.UserId, 
+                                  mcv.SiteId, parseable(mcv.ReceivedPainManagement), 
+                                  parseable(mcv.ConfirmedHivStatus), parseable(mcv.IsOnART), 
+                                  parseable(mcv.IsAdhering), parseable(mcv.ReceivedSupplement), 
+                                  parseString(mcv.NameOfReceivedSupplement), parseable(mcv.DischargeOrTranfer), 
+                                  parseString(mcv.TransferedTo), parseable(mcv.ReceivedCounselling),
+                                  mcv.PainManagementLevel, parseable(mcv.ReferPainManagement), 
+                                  mcv.HasDied, formartDateForMySQL(mcv.DateDied), mcv.ReceivedAdheranceCounselling);*/
+
+            }
+            db.runNonQuery(query);
+        }
+        /* patientid= {0}, 
                                                         visitid = {1},
                                                         visit_date = '{2}',
                                                         clinical_findings = '{3}',
@@ -281,7 +424,7 @@ namespace OpenHBC
                                                         receivedPainManagement = {8},
                                                         confirmedHIVStatus = {9},
                                                         isOnART = {10},
-                                                        isAdhering = {11},
+                                                        isAdheringtoART = {11},
                                                         receivedSupplement = {12},
                                                         nameOfSupplement = '{13}',
                                                         dischargeOrTransfer = {14},
@@ -291,22 +434,7 @@ namespace OpenHBC
                                                         referPainManagement = '{18}', 
                                                         hasDied = {19}, 
                                                         dateDied = {20}, 
-                                                        receivedAdheranceCounselling = {21} where visitId = {1}",
-                                  mcv.PatientId, mcv.VisitId, formartDateForMySQL(mcv.VisitDate), 
-                                  parseString(mcv.ClinicalFindings),parseString(mcv.Treatment), 
-                                  parseString(mcv.Remarks), mcv.UserId, 
-                                  mcv.SiteId, parseable(mcv.ReceivedPainManagement), 
-                                  parseable(mcv.ConfirmedHivStatus), parseable(mcv.IsOnART), 
-                                  parseable(mcv.IsAdhering), parseable(mcv.ReceivedSupplement), 
-                                  parseString(mcv.NameOfReceivedSupplement), parseable(mcv.DischargeOrTranfer), 
-                                  parseString(mcv.TransferedTo), parseable(mcv.ReceivedCounselling),
-                                  mcv.PainManagementLevel, parseable(mcv.ReferPainManagement), 
-                                  mcv.HasDied, formartDateForMySQL(mcv.DateDied), mcv.ReceivedAdheranceCounselling);
-
-            }
-            db.runNonQuery(query);
-        }
-
+                                                        receivedAdheranceCounselling = {21} where visitId = {1}*/
         private static string parseable(string ss)
         {
             if (ss == null)
@@ -343,10 +471,6 @@ namespace OpenHBC
             Patient pa = new Patient();
             return pa;
         }
-
-
-
-
         public static long generateNewPatientId()
        {
            string query = "select ";

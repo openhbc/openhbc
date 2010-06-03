@@ -14,9 +14,10 @@ namespace OpenHBC
     {
         private Patient pat;
         private Concepts regConcepts= new Concepts();
-        public RegPatient()
+        Login parent;
+        public RegPatient(Login parent)
         {
-            
+            this.parent = parent;
             InitializeComponent();
             initialiseCombos();
             btnClear.Visible = true;
@@ -75,11 +76,11 @@ namespace OpenHBC
         {
             if(Entity.CurrentPatient==null)
             {
-                Login.refreshPanel(new PatientSummary());
+                parent.SetUserControl(new PatientSummary(parent));
             }
             else
             {
-                Login.refreshPanel(new PatientSummary(Entity.CurrentPatient));
+                parent.SetUserControl(new PatientSummary(Entity.CurrentPatient,parent));
             }
             
         }
@@ -126,7 +127,7 @@ namespace OpenHBC
             
             Entity.saveReg(pat);
             Entity.CurrentPatient = pat;
-            Login.refreshPanel(new PatientSummary(Entity.CurrentPatient));
+            parent.SetUserControl(new PatientSummary(Entity.CurrentPatient,parent));
 
             
             

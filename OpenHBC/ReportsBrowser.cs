@@ -11,8 +11,10 @@ namespace OpenHBC
 {
     public partial class ReportsBrowser : UserControl
     {
-        public ReportsBrowser()
+        Login parent;
+        public ReportsBrowser(Login parent)
         {
+            this.parent = parent;
             InitializeComponent();
             
         }
@@ -20,7 +22,7 @@ namespace OpenHBC
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Entity.CurrentPatient = null;
-            Login.refreshPanel(new HomeHbC());
+            parent.SetUserControl(new HomeHbC(parent));
         }
 
        
@@ -28,7 +30,7 @@ namespace OpenHBC
         private void ReportButton_Click(object sender, EventArgs e)
         {
             string btnName = ((Button)sender).Text;
-            Login.refreshPanel(new DateEntries(btnName));
+            parent.SetUserControl(new DateEntries(btnName,parent));
             //Changed this to allow for some user interaction (for now just selecting the date)
             //Login.refreshPanel(new ReportPainManagement(btnName));
         }

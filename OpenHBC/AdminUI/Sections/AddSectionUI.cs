@@ -13,10 +13,12 @@ namespace OpenHBC.AdminUI.Sections
     public partial class AddSectionUI : UserControl
     {
         private Patient pat;
+        Login parent;
         private Concepts regConcepts = new Concepts();
 
-        public AddSectionUI()
+        public AddSectionUI(Login p)
         {
+            this.parent = p;
             InitializeComponent();
             cbxParish.Items.AddRange(regConcepts.Sites);
 
@@ -44,7 +46,7 @@ namespace OpenHBC.AdminUI.Sections
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new SectionsUI());
+            Login.refreshPanel(new SectionsUI(parent));
         }
 
         private void btnSaveSection_Click(object sender, EventArgs e)
@@ -58,7 +60,7 @@ namespace OpenHBC.AdminUI.Sections
                 SectionsMgr.EditSection(Int32.Parse(lblsectionId.Text), txtSectionName.Text, txtComments.Text, cbxParish.Text);
             }
 
-            Login.refreshPanel(new SectionsUI());
+            Login.refreshPanel(new SectionsUI(parent));
         }
 
      

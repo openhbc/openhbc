@@ -13,13 +13,16 @@ namespace OpenHBC
     public partial class PatientSummary : UserControl, ISecureableUI
     {
         Patient patient;
-        public PatientSummary()
+        Login parent;
+        public PatientSummary(Login parent)
         {
+            this.parent = parent;
             InitializeComponent();
             secure();
         }
-        public PatientSummary(Patient patient)
+        public PatientSummary(Patient patient, Login p)
         {
+            parent = p;
             InitializeComponent();
             this.patient = patient;
             //PopulateDataGridView();
@@ -53,24 +56,24 @@ namespace OpenHBC
                 PopulateDataGridView();
             }catch(Exception ex)
             {
-                Login.refreshPanel(new HomeHbC());
+                parent.SetUserControl(new HomeHbC(parent));
             }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new RegPatient(Entity.CurrentPatient));
+            parent.SetUserControl(new RegPatient(Entity.CurrentPatient));
         }
 
         private void btnNewVisit_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new HbcVisit());
+            parent.SetUserControl(new HbcVisit(parent));
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Entity.CurrentPatient = null;
-            Login.refreshPanel(new HomeHbC());
+            parent.SetUserControl(new HomeHbC(parent));
         }
 
         private void PopulateDataGridView()
@@ -94,7 +97,7 @@ namespace OpenHBC
             //DataGridView array = (DataGridView)sender;
             if(e.RowIndex==-1) return;
             CareVisit vis = getSelectedVisit(e);
-            Login.refreshPanel(new HbcVisit(vis));
+            parent.SetUserControl(new HbcVisit(vis,parent));
 
         }
 
@@ -150,7 +153,7 @@ namespace OpenHBC
             {
                 int i = Int32.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
                 CareVisit vis = getSelectedVisit(i);
-                Login.refreshPanel(new HbcVisit(vis));
+                parent.SetUserControl(new HbcVisit(vis,parent));
             }
             catch(Exception exc)
             {

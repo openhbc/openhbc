@@ -13,8 +13,10 @@ namespace OpenHBC
 {
     public partial class HomeHbC : UserControl,ISecureableUI
     {
-        public HomeHbC()
+        Login parent;
+        public HomeHbC(Login parent)
         {
+            this.parent = parent;
             InitializeComponent();
             secure();
         }
@@ -65,8 +67,8 @@ namespace OpenHBC
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            PatientSearchList pat = new PatientSearchList(txtSurname.Text,txtFirstName.Text,txtId.Text);
-            Login.refreshPanel(pat);
+            PatientSearchList pat = new PatientSearchList(txtSurname.Text,txtFirstName.Text,txtId.Text,parent);
+            parent.SetUserControl(pat);
             
         }
 
@@ -87,7 +89,7 @@ namespace OpenHBC
 
         private void btnNewPatient_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new RegPatient());
+            parent.SetUserControl(new RegPatient(parent));
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -97,19 +99,21 @@ namespace OpenHBC
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new ReportsBrowser());
+            MysqlDbUtility db = new MysqlDbUtility();
+            DataSet1 ds = db.GetAllPatients();
+            parent.SetUserControl(new ReportsBrowser(parent));
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new Admin());
+            parent.SetUserControl(new Admin(parent));
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Entity.ClearCurrentState();
 
-            Login.refreshPanel(new MainLogin());
+            parent.SetUserControl(new MainLogin(parent));
         }
     }
 }

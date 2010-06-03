@@ -10,9 +10,11 @@ namespace OpenHBC
 {
     public partial class PatientSearchList : UserControl
     {
+        Login parent;
         public string surname2;
-        public PatientSearchList(string surname, string firstname, string id)
+        public PatientSearchList(string surname, string firstname, string id, Login parent)
         {
+            this.parent = parent;
             InitializeComponent();
             surname2 = surname;
             PopulateDataGridView(surname, firstname,id);
@@ -27,10 +29,14 @@ namespace OpenHBC
             if (result == null) return;
             foreach(string[]s in result)
             {
-                if(s==null) break;
-                dataGridView1.Rows.Add(s);
+                if(s==null) break;    
+                DateTime temp = DateTime.Parse(s[4]);
+                int yrs = DateTime.Now.Year - temp.Year;
+                if (DateTime.Now.Month < temp.Month || (DateTime.Now.Month == temp.Month && DateTime.Now.Day < temp.Day))
+                    yrs--;
+                int t = dataGridView1.Rows.Add(s);
+                dataGridView1.Rows[t].Cells["Age"].Value = yrs;
             }
-
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -45,15 +51,15 @@ namespace OpenHBC
             
             //this.btnBack.Text = test.getValue();
 
-            Login.refreshPanel(new PatientSummary(Entity.loadPatient(id)));
+            parent.SetUserControl(new PatientSummary(Entity.loadPatient(id),parent));
 
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            HomeHbC home = new HomeHbC();
+            HomeHbC home = new HomeHbC(parent);
             home.txtSurname.Text = this.surname2;
-            Login.refreshPanel(home);
+            parent.SetUserControl(home);
         }
 
         private void PatientSearchList_Load(object sender, EventArgs e)
@@ -67,6 +73,11 @@ namespace OpenHBC
             {
                 dataGridView1_CellDoubleClick(sender, new DataGridViewCellEventArgs(0, dataGridView1.CurrentRow.Index-1));
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
        

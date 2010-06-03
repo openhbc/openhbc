@@ -10,16 +10,19 @@ namespace OpenHBC
 {
     public partial class DateEntries : UserControl
     {
+        Login parent;
         string reportNameSelected = "";
 
-        public DateEntries()
+        public DateEntries(Login parent)
         {
+            this.parent = parent;
             InitializeComponent();
         }
 
         //Gets the name of the report from the text property of the button that has been pressed
-        public DateEntries(string reportname)
+        public DateEntries(string reportname, Login p)
         {
+            parent = p;
             InitializeComponent();
             reportNameSelected = reportname;
         }
@@ -34,7 +37,7 @@ namespace OpenHBC
             ReportPainManagement.StartDate = dtStartDate.Value;
             ReportPainManagement.EndDate = dtEndDate.Value;
             
-            Login.refreshPanel(new ReportPainManagement(reportNameSelected));
+            parent.SetUserControl(new ReportPainManagement(reportNameSelected,parent));
         }
 
         private void DateEntries_Load(object sender, EventArgs e)
@@ -44,7 +47,7 @@ namespace OpenHBC
 
         private void btnBackToReportList_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new ReportsBrowser());
+            parent.SetUserControl(new ReportsBrowser(parent));
         }
     }
 }

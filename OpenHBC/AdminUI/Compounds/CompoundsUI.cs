@@ -12,10 +12,11 @@ namespace OpenHBC.AdminUI.Compounds
 {
     public partial class CompoundsUI : UserControl
     {
+        Login parent;
         
-        public CompoundsUI()
+        public CompoundsUI(Login p)
         {
-           
+            this.parent = p;
             InitializeComponent();
             loadGrid();
         }
@@ -37,12 +38,12 @@ namespace OpenHBC.AdminUI.Compounds
 
         private void btnAddCompound_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new AddCompoundUI());
+            parent.SetUserControl(new AddCompoundUI(parent));
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new Admin());
+            parent.SetUserControl(new Admin(parent));
         }
 
         private void btnDeleteCompound_Click(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace OpenHBC.AdminUI.Compounds
                 int id = Int32.Parse(DataGridUtility.GetValue(dataGridCompounds.CurrentRow, 3).ToString());
 
                 CompoundsMgr.deleteCompound(id.ToString());
-                Login.refreshPanel(new CompoundsUI());
+                parent.SetUserControl(new CompoundsUI(parent));
             }
         }
 
@@ -72,7 +73,7 @@ namespace OpenHBC.AdminUI.Compounds
             string Comments =    DataGridUtility.GetValue(dataGridCompounds.CurrentRow, 2).ToString();
             string SectionName = DataGridUtility.GetValue(dataGridCompounds.CurrentRow, 1).ToString();
             string CompundName = DataGridUtility.GetValue(dataGridCompounds.CurrentRow, 0).ToString();
-            Login.refreshPanel(new AddCompoundUI(id , CompundName,SectionName, Comments));
+            parent.SetUserControl(new AddCompoundUI(id , CompundName,SectionName, Comments));
         }
 
         private void dataGridCompounds_CellContentClick(object sender, DataGridViewCellEventArgs e)

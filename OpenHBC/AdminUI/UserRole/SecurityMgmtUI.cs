@@ -15,12 +15,15 @@ namespace OpenHBC
 {
     public partial class SecurityMgmtUI : UserControl
     {
-        public SecurityMgmtUI()
+        Login parent;
+        public SecurityMgmtUI(Login p)
         {
+            this.parent = p;
             InitializeComponent();
         }
-        public SecurityMgmtUI(int tabId)
+        public SecurityMgmtUI(int tabId, Login p)
         {
+            this.parent = p;
             InitializeComponent();
             FocusTab(tabId);
             PopulateGrids(tabId);
@@ -75,27 +78,27 @@ namespace OpenHBC
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new SecurityUserDetails());
+            parent.SetUserControl(new SecurityUserDetails(parent));
         }
 
         private void btnAddRole_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new RoleSecurityDetailsUI());
+            parent.SetUserControl(new RoleSecurityDetailsUI(parent));
         }
 
         private void btnUserCancel_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new Admin());
+            parent.SetUserControl(new Admin(parent));
         }
 
         private void btnUserSave_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new Admin());
+            parent.SetUserControl(new Admin(parent));
         }
 
         private void btnRoleBack_Click(object sender, EventArgs e)
         {
-            Login.refreshPanel(new Admin());
+            parent.SetUserControl(new Admin(parent));
         }
 
         private void SecurityMgmtUI_OnLoad(object sender, EventArgs e)
@@ -114,7 +117,7 @@ namespace OpenHBC
             {
                 int id = Int32.Parse(DataGridUtility.GetValue(usersGridView.CurrentRow, 2).ToString());
                 User user =  SecurityServiceProvider.LoadUser(id);
-                Login.refreshPanel(new SecurityUserDetails(user));
+                parent.SetUserControl(new SecurityUserDetails(user,parent));
             }
             catch (Exception exc)
             {
@@ -128,7 +131,7 @@ namespace OpenHBC
             string rolename = DataGridUtility.GetValue(rolesGridView.CurrentRow, 0).ToString();
             SecurityRole role = SecurityServiceProvider.GetRoleFromName(rolename);
 
-            Login.refreshPanel(new RoleSecurityDetailsUI(role));
+            parent.SetUserControl(new RoleSecurityDetailsUI(role,parent));
           
         }
 
@@ -142,7 +145,7 @@ namespace OpenHBC
             
                 User user = SecurityServiceProvider.LoadUser(id);
                 SecurityServiceProvider.DeleteUser(user);
-                Login.refreshPanel(new SecurityMgmtUI());
+                parent.SetUserControl(new SecurityMgmtUI(parent));
             }
         }
     }

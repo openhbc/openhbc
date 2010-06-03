@@ -12,8 +12,10 @@ namespace OpenHBC
 {
     public partial class ReportAllPatients : UserControl
     {
-        public ReportAllPatients()
+        Login parent;
+        public ReportAllPatients(Login p)
         {
+            parent = p;
             MysqlDbUtility db = new MysqlDbUtility();
             InitializeComponent();
             ReportDocument reportdoc = new ReportDocument();
